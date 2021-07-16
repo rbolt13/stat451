@@ -1,5 +1,5 @@
 ---
-title: "Chapter 3"
+title: "Chapter 3 : Discrete Random Variables and Probability Distribution"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
