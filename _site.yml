@@ -1,0 +1,21 @@
+---
+name: "stat451"
+output_dir: "docs"
+output: 
+  html_document:
+    css: CSSBackground.css
+    theme: readable
+navbar:
+  title: "Statistics 451"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "1 : Statistics"
+      href: chapter1.html
+    - text: "2 : Probability"
+      href: chapter2.html
+    - text: "3 : DRV and Distributions"
+      href: chapter3.html
+    - text: "Contact"
+      href: contact.html
+---

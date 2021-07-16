@@ -1,0 +1,43 @@
+---
+title: "Contact"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'contact.html'))})
+output: 
+  html_document:
+    css: css/statCSSBackground.css
+    theme: readable
+---
+
+Content coming soon. 
+
+```{r, echo = F, message=F}
+library(dplyr)
+library(kableExtra)
+```
+
+
+```{r, echo=F}
+contact.urls <- c("https://github.com/rbolt13",
+                  "https://rbolt13.github.io/rsite/",
+                  "https://rbolt13.github.io/Oregon-Grown/",
+                  "https://rbolt13.github.io/rsite2/")
+Links <- c("Github",
+          "rsite",
+          "Oregon Grown",
+          "rsite2")
+Description <- c("The code for this and all other projects I've made are on Github. It's the best way to see what projects I am working on currently.",
+                 "This is the first website I made using R-Studio and Github. Here I posted projects from Statistics- 341 : Introduction to R, such as : Kobe Hot Hands, Gloabal Fuel Data, and COVID-19.",
+                 "Completed fall term 2020 at Portland Community College, this project uses GIS and Arc Pro to investigate dispensary diversity in Oregon.",
+                 "Inspired by the first site I created with R studio and Github, this is the second website I created to track projects I worked on during Summer term 2021. Note that this site is still under construction.")
+
+# Data Frame
+y <- data.frame(Links, Description)
+y$Links <- paste0("[", y$Links, "](", contact.urls, ")")
+kable(y) %>%
+  kable_paper("hover", full_width = F) %>%
+  row_spec(0, background = "white")
+```
+

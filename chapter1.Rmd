@@ -1,0 +1,14 @@
+---
+title: "chapter1"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'chapter1.html'))})
+output: 
+  html_document:
+    css: css/statCSSBackground.css
+    theme: readable
+---
+
+# Content Coming Soon

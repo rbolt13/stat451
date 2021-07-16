@@ -1,0 +1,10 @@
+body {
+  background-image: url('https://i.pinimg.com/564x/3c/1e/62/3c1e6253826f6a009b2a02559b800753.jpg');
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+div {
+  background-color: rgba(255, 255, 255, 0.45)   /* 35% opaque white */;
+  padding: 0.25em;
+}
