@@ -22,9 +22,9 @@ output:
 > A **discrete** random variable is an rv whose possible values either consitiute a finite set or else can be listed in an infinite sequence in which there is a first element, a second element, and so on ("countable" infinite).
 
 > A random variable is **continuous** if *both* of the following apply:
-1. Its set of possible values consists either of all numbers in a single interval on the number line ($-\infty to \infty $) or all number in a disjoint union of such intervals ($[0,10] \cap [20, 30]$). 
+1. Its set of possible values consists either of all numbers in a single interval on the number line ($-\infty$ to $\infty$) or all number in a disjoint union of such intervals ($[0,10] \cap [20, 30]$). 
 
-> The **Probability distribution** or **probability mass function** (pmf) of a discrete rv is defined for every number $x$ by $p(x)=P(X=x)=P(all \omega \in \mathscr{S}:X(\omega)=x)$.
+> The **Probability distribution** or **probability mass function** (pmf) of a discrete rv is defined for every number $x$ by $p(x)=P(X=x)=P($all $\omega \in \mathscr{S}:X(\omega)=x)$.
 
 > Suppose $p(x)$ depends on a quantity that can be assigned any one of a number of possible values, with each different value determining a different probability distribution. Such a quantity is called a **parameter** of the distribution. The collection of all probability distributions for different value of the parameter is called a **family** of probability distributions. 
 
