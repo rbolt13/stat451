@@ -310,6 +310,15 @@ $(document).ready(function () {
 <blockquote>
 <p>Let <span class="math inline">\(X\)</span> have pmf p(x) and expected value <span class="math inline">\(\mu\)</span>. Then the <strong>variance</strong> of <span class="math inline">\(X\)</span>, denoted by <span class="math inline">\(V(X)\)</span> or <span class="math inline">\(\sigma_{X}^2\)</span> or just <span class="math inline">\(\sigma ^2\)</span>, is <span class="math display">\[V(X)=\sum_{D}^{} (x-\mu)^2 \cdot p(x)=E(X-\mu)^2]\]</span> The <strong>standard deviation</strong> (SD) of X is <span class="math display">\[\sigma x \sqrt{ \sigma_{X}^2}\]</span></p>
 </blockquote>
+<blockquote>
+<p>An experiment for which <strong>Condition 1</strong>, <strong>Condition 2</strong>, *Condition 3<strong>, </strong>Condition 4<strong> (a fixed number of dichotomous, independent, homogenous trials) are satisfied is called a </strong>binomial experiment**.</p>
+</blockquote>
+<blockquote>
+<p>The <strong>binomial random variable X</strong> associated with a binomial experiment consisting of <span class="math inline">\(n\)</span> trials is defined as <span class="math inline">\(X =\)</span> the number of S’s among the n trials.</p>
+</blockquote>
+<ul>
+<li>because the pmf of a binomial random variable X depends on the two parameters <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span>, we denote the pmf by <span class="math inline">\(b(x;n,p)\)</span></li>
+</ul>
 </div>
 <div id="theorems" class="section level2">
 <h2>Theorems</h2>
@@ -336,6 +345,106 @@ $(document).ready(function () {
 <blockquote>
 <p><strong>Proposition - Variance of a Linear Function : </strong><span class="math display">\[V(aX)+b=\sigma_{aX+b}^2 = a^2 \cdot \sigma_{X}^{2}\]</span> and <span class="math display">\[\sigma_{aX+b} = |a| \cdot \sigma_X\]</span> In particular, <span class="math display">\[\sigma_{aX} = |a| \cdot \sigma X, \sigma_{X+b}=\sigma X\]</span></p>
 </blockquote>
+<blockquote>
+<p><strong>Rule - binomial “without-replacement” : </strong>Consider sampling without replacement from a dichotomous population of size N. if the sample size (number of trials) <span class="math inline">\(n\)</span> is at most 5% of the population size, the experiment can be analyzed as though it were a binomial experiment.</p>
+</blockquote>
+<ul>
+<li>dichotomous : divided into two branches</li>
+</ul>
+<blockquote>
+<strong>Theorem - Binomial Probability :</strong>
+<p><span class="math display">\[ 
+b(x;n,p) = \begin{cases}
+(\frac{n}{p})p^x(1-p)^{n-x} &amp; x =0,1,2,...n \\
+0 &amp;\text{otherwise}\
+\end{cases}
+\]</span> In otherwords: <span class="math display">\[ 
+b(x;n,p) = \begin{cases}
+\text{number of sequences of} \\
+\text{length n consisting of x S&#39;s}\
+\end{cases} \cdot \begin{cases}
+\text{probability of any} \\
+\text{particular such sequence}\
+\end{cases}
+\]</span></p>
+</blockquote>
+</div>
+<div id="in-class-examples" class="section level1">
+<h1>In Class Examples</h1>
+<div id="in-class-example-7-15-2021" class="section level3">
+<h3>In Class Example (7-15-2021)</h3>
+<p>Suppose that the probaility of giving birth to a femal is <span class="math inline">\(\frac{1}{2}\)</span>. A family decides to have children until they have a son. What is the probability of giving birth to 3 females before a son is born?</p>
+<p><span class="math inline">\(x\)</span> = Number of females until a son is born</p>
+<p><span class="math inline">\(x\)</span>~Geometric distribution with <span class="math inline">\(1=\frac{1}{2}\)</span></p>
+<p><span class="math inline">\(P[x=3]=( \frac{1}{2})^2( \frac{1}{2})=\frac{1}{16}\)</span></p>
+</div>
+<div id="exercise-80-page-135" class="section level3">
+<h3>Exercise 80 (page 135)</h3>
+<p>Let <span class="math inline">\(X\)</span> be the number of material anomalies occuring in a particulat region of an aircraft gas-turbine disk. The article <strong>“Methodology for Probabilistic Life Prediction of Multiple-Anomaly Materials” (Amer. Inst. of Aeronautics and Astronautics J., 2006: 787-793)</strong> proposes a Poisson distribution for X. Suppose that <span class="math inline">\(\mu =4\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>Compute both <span class="math inline">\(P(X\leq4)\)</span> and <span class="math inline">\(P(X&lt;4)\)</span>.</strong></li>
+</ol>
+<p>Using a TI-83 : [2nd] <span class="math inline">\(\rightarrow\)</span> [DISTR] <span class="math inline">\(\rightarrow\)</span> [C:poissoncdf(4,4)]</p>
+<p><span class="math inline">\(P(X\leq4) = 0.6288\)</span></p>
+<p>Using a TI-83 : [2nd] <span class="math inline">\(\rightarrow\)</span> [DISTR] <span class="math inline">\(\rightarrow\)</span> [C:poissoncdf(4,3)]</p>
+<p><span class="math inline">\(P(X&lt;4)=P(X\leq 3) = 0.4335\)</span></p>
+<p>Note: <span class="math inline">\(P(X=4) = 0.629-0.433 = 0.196\)</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><strong>Compute <span class="math inline">\(P(4\leq X \leq 8)\)</span>.</strong></li>
+</ol>
+<p><span class="math inline">\(P(4\leq X \leq 8)= 0.979 - 0.4335 = 0.5455\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><strong>Computer <span class="math inline">\(P(8\leq X)\)</span>.</strong></li>
+</ol>
+<p>Using a TI-83 : [2nd] <span class="math inline">\(\rightarrow\)</span> [DISTR] <span class="math inline">\(\rightarrow\)</span> [C:poissoncdf(4,8)]</p>
+<p><span class="math inline">\(P(8\leq X) = 0.979\)</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><strong>What is the probability that the numebr of anomalies exceeds its mean value by no more than one standard deviation?</strong></li>
+</ol>
+<p><span class="math inline">\(P[X&gt;\mu + \sigma]=P[X&gt;4+2]=P[x&gt;6]=1-F(5)=0.21486\)</span></p>
+</div>
+<div id="exercise-87-page-136" class="section level3">
+<h3>Exercise 87 (page 136)</h3>
+<p>The number of requests for assitance received by a towing service is a Poisson process with rate <span class="math inline">\(\alpha =4\)</span> per hour.</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>Compute the probability that exactly ten requests are received during a particular 2-hour period.</strong></li>
+</ol>
+<p>Using a TI-83 : [2nd] <span class="math inline">\(\rightarrow\)</span> [DISTR] <span class="math inline">\(\rightarrow\)</span> [C:poissonpdf(8,10)]</p>
+<p><span class="math inline">\(P(X=10)=0.09926\)</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><strong>If the operators of the towing service take a 30-min break for lunch, what is the probability that they do not miss any calls for assistance?</strong></li>
+</ol>
+<p>Define Y as the number of requests during a 30 minute period.</p>
+<p><span class="math inline">\(y\)</span>~<span class="math inline">\(P(\mu =\frac{4}{2}=2)\)</span></p>
+<p>Using a TI-83 : [2nd] <span class="math inline">\(\rightarrow\)</span> [DISTR] <span class="math inline">\(\rightarrow\)</span> [C:poissonpdf(2,0)]</p>
+<p><span class="math inline">\(P(Y=0)=0.13533\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><strong>How many calls would you expect during their break?</strong></li>
+</ol>
+<p><span class="math inline">\(E(Y)=2\)</span></p>
+</div>
+<div id="exercise-50-page-124" class="section level3">
+<h3>Exercise 50 (page 124)</h3>
+<p>A particular telephone number is used to receive both voice calls and fax messages. Suppose that 25% of the incoming calls involve fax messages, and consider a sample of 25 incoming calls. What is the probability that</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>At most 6 calls involve a fax message?</strong></li>
+</ol>
+<p>[binomialcdf(25,.25,6)]=0.561</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><strong>Exactly 6 of the calls involve a fax message?</strong></li>
+</ol>
+<p><span class="math inline">\(P[x=6]\)</span> = <span class="math inline">\(25\choose6\)</span> <span class="math inline">\((0.25)^6(0.75)^{19}\)</span></p>
+<p>[binomialpdf(25,.25,6)]=0.1828</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><strong>At least 6 of the calls involve a fax message?</strong></li>
+</ol>
+<p>[binomialpdf(25,.25,5)]=0.1828</p>
+<p><span class="math inline">\(P(x\geq 6)=1-P[x&lt;6]=1-P[x\leq 5]=0.6217\)</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><strong>More than 6 of the calls involve a fax message?</strong></li>
+</ol>
+<p><span class="math inline">\(P[x\geq 6]=1-0.5610=0.439\)</span></p>
+</div>
 </div>
 
 

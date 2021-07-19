@@ -38,6 +38,11 @@ output:
 
 > Let $X$ have pmf p(x) and expected value $\mu$. Then the **variance** of $X$, denoted by $V(X)$ or $\sigma_{X}^2$ or just $\sigma ^2$, is $$V(X)=\sum_{D}^{} (x-\mu)^2 \cdot p(x)=E(X-\mu)^2]$$ The **standard deviation** (SD) of X is $$\sigma x \sqrt{ \sigma_{X}^2}$$ 
 
+> An experiment for which **Condition 1**, **Condition 2**, *Condition 3**, **Condition 4** (a fixed number of dichotomous, independent, homogenous trials) are satisfied is called a **binomial experiment**.  
+
+> The **binomial random variable X** associated with a binomial experiment consisting of $n$ trials is defined as $X =$ the number of S's among the n trials.
+
+* because the pmf of a binomial random variable X depends on the two parameters $n$ and $p$, we denote the pmf by $b(x;n,p)$
 
 ## Theorems
 
@@ -60,3 +65,112 @@ Two important rules of expected values :
 
 > **Proposition - Variance of a Linear Function : **$$V(aX)+b=\sigma_{aX+b}^2 = a^2 \cdot \sigma_{X}^{2}$$ and $$\sigma_{aX+b} = |a| \cdot \sigma_X$$ In particular, $$\sigma_{aX} = |a| \cdot \sigma X, \sigma_{X+b}=\sigma X$$
 
+> **Rule - binomial "without-replacement" : **Consider sampling without replacement from a dichotomous population of size N. if the sample size (number of trials) $n$ is at most 5% of the population size, the experiment can be analyzed as though it were a binomial experiment. 
+
+* dichotomous : divided into two branches 
+
+> **Theorem - Binomial Probability :**\usepackage{amsmath}
+\[ 
+b(x;n,p) = \begin{cases}
+      (\frac{n}{p})p^x(1-p)^{n-x} & x =0,1,2,...n \\
+      0 &\text{otherwise}\
+   \end{cases}
+\]
+In otherwords: 
+\[ 
+b(x;n,p) = \begin{cases}
+      \text{number of sequences of} \\
+      \text{length n consisting of x S's}\
+   \end{cases} \cdot \begin{cases}
+      \text{probability of any} \\
+      \text{particular such sequence}\
+   \end{cases}
+\]
+
+> **Proposition - 
+
+# In Class Examples
+
+### In Class Example (7-15-2021)
+Suppose that the probaility of giving birth to a femal is $\frac{1}{2}$. A family decides to have children until they have a son. What is the probability of giving birth to 3 females before a son is born? 
+
+$x$ = Number of females until a son is born
+
+$x$~Geometric distribution with $1=\frac{1}{2}$
+
+$P[x=3]=( \frac{1}{2})^2( \frac{1}{2})=\frac{1}{16}$
+
+### Exercise 80 (page 135)
+Let $X$ be the number of material anomalies occuring in a particulat region of an aircraft gas-turbine disk. The article **"Methodology for Probabilistic Life Prediction of Multiple-Anomaly Materials" (Amer. Inst. of Aeronautics and Astronautics J., 2006: 787-793)** proposes a Poisson distribution for X. Suppose that $\mu =4$. 
+
+a. **Compute both $P(X\leq4)$ and $P(X<4)$.**
+
+Using a TI-83 : [2nd] $\rightarrow$ [DISTR] $\rightarrow$  [C:poissoncdf(4,4)]
+
+$P(X\leq4) = 0.6288$
+
+Using a TI-83 : [2nd] $\rightarrow$ [DISTR] $\rightarrow$  [C:poissoncdf(4,3)]
+
+$P(X<4)=P(X\leq 3) = 0.4335$
+
+Note: $P(X=4) = 0.629-0.433 = 0.196$
+
+b. **Compute $P(4\leq X \leq 8)$.**
+
+$P(4\leq X \leq 8)= 0.979 - 0.4335 = 0.5455$
+
+c. **Computer $P(8\leq X)$.**
+
+Using a TI-83 : [2nd] $\rightarrow$ [DISTR] $\rightarrow$  [C:poissoncdf(4,8)]
+
+$P(8\leq X) = 0.979$
+
+d. **What is the probability that the numebr of anomalies exceeds its mean value by no more than one standard deviation?** 
+
+$P[X>\mu + \sigma]=P[X>4+2]=P[x>6]=1-F(5)=0.21486$
+
+### Exercise 87 (page 136)
+The number of requests for assitance received by a towing service is a Poisson process with rate $\alpha =4$ per hour. 
+
+a. **Compute the probability that exactly ten requests are received during a particular 2-hour period.** 
+
+Using a TI-83 : [2nd] $\rightarrow$ [DISTR] $\rightarrow$  [C:poissonpdf(8,10)]
+
+$P(X=10)=0.09926$
+
+b. **If the operators of the towing service take a 30-min break for lunch, what is the probability that they do not miss any calls for assistance?** 
+
+Define Y as the number of requests during a 30 minute period.
+
+$y$~$P(\mu =\frac{4}{2}=2)$
+
+Using a TI-83 : [2nd] $\rightarrow$ [DISTR] $\rightarrow$  [C:poissonpdf(2,0)]
+
+$P(Y=0)=0.13533$
+
+c. **How many calls would you expect during their break?** 
+
+$E(Y)=2$
+
+### Exercise 50 (page 124)
+A particular telephone number is used to receive both voice calls and fax messages. Suppose that 25% of the incoming calls involve fax messages, and consider a sample of 25 incoming calls. What is the probability that
+
+a. **At most 6 calls involve a fax message?**
+
+[binomialcdf(25,.25,6)]=0.561
+
+b. **Exactly 6 of the calls involve a fax message?**
+
+$P[x=6]$ = $25\choose6$ $(0.25)^6(0.75)^{19}$
+
+[binomialpdf(25,.25,6)]=0.1828
+
+c. **At least 6 of the calls involve a fax message?**
+
+[binomialpdf(25,.25,5)]=0.1828
+
+$P(x\geq 6)=1-P[x<6]=1-P[x\leq 5]=0.6217$
+
+d. **More than 6 of the calls involve a fax message?**
+
+$P[x\geq 6]=1-0.5610=0.439$
