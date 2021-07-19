@@ -87,7 +87,11 @@ b(x;n,p) = \begin{cases}
    \end{cases}
 \]
 
-> **Proposition - 
+> **Proposition - The Mean and Variance of X :**If $X$~Bin$(n,p)$, then $E(X)=np$, $V(X)=np(1-p)=npq$, and $\sigma x=\sqrt{npq}$ (where $q=1-p$)
+
+> **Proposition - Hypergeometric distribution : **If $X$ is the number of S's (successes) in a completely random sample of size $n$ drawn from a population consisting of M S's and $(N-M)$F's (failures), then the probability distribution of $X$, called the **hypergeometric distribution**, is given: $$P(X=x)=h(x;n,M,N)=\frac{{M\choose x}{N-M\choose n-x}}{{N\choose n}}$$ for x an integer satisfying max$(o,n-N+M)\leq x\leq min(n,M)$.
+
+> **Proposition - Mean and Variance of Hypergeometric Distribution : **The mean and variance of the hypergeometric rv $X$ having pmf $h(x;n,M,N)$ are $$E(x)=n\cdot\frac{M}{N}$$  $$V(X)=(\frac{N-n}{N-1})\cdot n\cdot \frac{M}{N}\cdot (1-\frac{M}{N})$$
 
 # In Class Examples
 
