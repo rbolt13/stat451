@@ -6,9 +6,7 @@ knit: (function(input_file, encoding) {
  encoding=encoding,
  output_file=file.path(dirname(input_file), out_dir, 'chapter2.html'))})
 output: 
-  html_document:
-    css: css/statCSSBackground.css
-    theme: readable
+  html_document: rmdformats::readthedown
 ---
 
 ## Definitions 
@@ -31,4 +29,26 @@ output:
 
 >![](img/vendiagrams.png)
 
-# More Content Coming Soon 
+## Theorems and Axioms 
+
+> **Axiom 1. : **For any event A, $P(A)\geq 0$. 
+
+* the chance of A occuring should be nonnegative 
+
+> **Axiom 2. : **$P(\mathscr{S} =1)$.
+
+* $\mathscr{S}$ contains all possible outcomes
+
+> **Axiom 3. : **If $A_1$, $A_2$, $A_3$, ... is an infinite collection of disjoint events, then $$P(A_1\cup A_2\cup_2 A_3\cup ...)=\sum_{i=1}^{\infty} P(A_i)$$
+
+* the chance that least one event will occur, and no two events can occur simultaneously, is the sum of the chances of the individual events. 
+
+> **Proposition : **$P(\emptyset )=0$ where $\emptyset$ is the null evetn (the event containing no outcomes whatsoever).  This in turn implies that the property contained in **Axiom 3** is valid for a *finite* collection of dijoint events. 
+
+> **Proposition : **For any event A, $P(A)+P(A')=1$, from which $P(A)=1-P(A')$
+
+> **Proposition : **For any event A, $P(A)\leq 1$.
+
+> **Proposition : **For any two events A and B, $$P(A\cup B)=P(A)+P(B)-P(A\cap B)$$
+
+

@@ -6,9 +6,7 @@ knit: (function(input_file, encoding) {
  encoding=encoding,
  output_file=file.path(dirname(input_file), out_dir, 'contact.html'))})
 output: 
-  html_document:
-    css: css/statCSSBackground.css
-    theme: readable
+  html_document: rmdformats::readthedown
 ---
 
 Content coming soon. 

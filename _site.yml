@@ -2,9 +2,7 @@
 name: "stat451"
 output_dir: "docs"
 output: 
-  html_document:
-    css: CSSBackground.css
-    theme: readable
+  html_document: rmdformats::readthedown
 navbar:
   title: "Statistics 451"
   left:
