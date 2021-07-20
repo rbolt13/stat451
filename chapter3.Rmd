@@ -10,6 +10,10 @@ output:
     css: css/statCSSBackground.css
     theme: readable
 ---
+```{r, echo=F, message=F}
+library(dplyr)
+library(kableExtra) # highlights table when hover over a line
+```
 
 ## Definitions
 
@@ -93,7 +97,47 @@ b(x;n,p) = \begin{cases}
 
 > **Proposition - Mean and Variance of Hypergeometric Distribution : **The mean and variance of the hypergeometric rv $X$ having pmf $h(x;n,M,N)$ are $$E(x)=n\cdot\frac{M}{N}$$  $$V(X)=(\frac{N-n}{N-1})\cdot n\cdot \frac{M}{N}\cdot (1-\frac{M}{N})$$
 
-# In Class Examples
+# Examples
+
+### Exercise 36 (page 116)
+Let $X$ be the damage incurred (in dollars) in a certain type of accident during a given year. Possible $X$ values are 0, 1000, 5000, 10000, with probabilities of 0.8, 0.1, 0.08, 0.02, respectively. A particular company offers a 500 dollars deductible policy. If the company wishes its expected profit to be 100 dollars, what premium amount should it charge?  
+
+X = Damage incurred 
+
+Y = h(x) = Amount the company pays
+
+```{r, echo = F}
+x <- c(0, 1000, 5000, 10000)
+p.x <- c(0.8, 0.1, 0.08, 0.02)
+p.y <- c(0, 500, 4500, 9500)
+damage.payout <- data.frame("x" = x, "p.x" = p.x, "p.y" = p.y)
+damage.payout_new <- as.data.frame(t(damage.payout))
+options(scipen = 50) # get rid of e's
+kable(damage.payout_new, col.names = NULL) %>%
+  kable_paper()
+```
+
+E[Y]=0(0.8) + 500(0.1) + 4500(0.08) + 9500(0.02) = 600 dollars
+
+### Exercise 32 (page 16)
+A certian brand of upright freezer is available in three different rated capacities: $16ft^3$, $18ft^3$, and $20ft^3$. Let $X=$ the rated capacity of a freezer of this brand sold at a certain store. Suppose that $X$ has pmf: 
+```{r, echo=F}
+x <- c(16,18,20)
+p.x <- c(0.2,0.5,0.3)
+df <- data.frame("x" = x, "p.x" = p.x)
+df.new <- as.data.frame(t(df))
+options(scipen = 50)
+kable(df.new, col.names = NULL) %>%
+  kable_paper()
+```
+a. **Compute $E(X)$, $E(X^2)$, and $V(X)$.**
+
+b. **If the price of a freezer having capacity of $X$ is $70X-650$, what is the expected price paid by the next customer to buy a freezer?** 
+
+c. **What is the variance of the price paid by the next custormer?** 
+
+d. **Suppose that although the rated capacity of a freezer is $X$, the actual capacity is $h(X)=X-0.008X^2$. What is the expected actual capacity of the freezer purchased by the next customer?** 
+
 
 ### In Class Example (7-15-2021)
 Suppose that the probaility of giving birth to a femal is $\frac{1}{2}$. A family decides to have children until they have a son. What is the probability of giving birth to 3 females before a son is born? 
