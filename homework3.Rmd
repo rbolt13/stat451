@@ -21,8 +21,10 @@ p.y <- c(0.05, 0.10, 0.12, 0.14, 0.25, 0.17, 0.06, 0.05, 0.03, 0.02, 0.01)
 df <- data.frame("y" = y, "p.y" = p.y)
 df_new <- as.data.frame(t(df))
 options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("y", "p(y)")
 kable(df_new, col.names = NULL) %>%
-  kable_paper()
+  kable_paper() %>%
+  kable_material(c( "hover"))
 ```
 (a.) **What is the probability that the flight will accommodate all ticketed passengers who show up?**
 
@@ -46,8 +48,10 @@ p.x <- c(0.10, 0.15, 0.20, 0.25, 0.20, 0.06, 0.04)
 df <- data.frame("x" = x, "p.x" = p.x)
 df_new <- as.data.frame(t(df))
 options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("x", "p(x)")
 kable(df_new, col.names = NULL) %>%
-  kable_paper()
+  kable_paper() %>%
+  kable_material(c( "hover"))
 ```
 \usepackage{amsmath}
 \[ 
@@ -73,11 +77,157 @@ plot(lines, main = "cdf of F(x)",
 
 (a.) **{at most three lines are in use}**
 
+P(X$\leq$ 3)=0.70
+
 (b.) **{fewer than three lines are in use}**
+
+P(X<3)=0.45
 
 (c.) **{at least three lines are in use}**
 
+P(X$\geq$ 3)=1-P(X<3)=0.55
+
 (d.) **{between two and five lines, inclusive, are in use}**
+
+P(2$\leq$ X$\leq$ 5)=0.96-0.25=0.71
+
+2. **3.24 : An insurance company offers its policyholders a number of different premium payment options. For a randomly selected policyholder, let X = the number of months between successive payments. The cdf of X is as follows: **
+
+\[ 
+F(x) = \begin{cases}
+      0 & x < 1 \\
+      0.30 & 1 \leq x < 3 \\
+      0.40 & 3 \leq x < 4 \\
+      0.45 & 4 \leq x < 6 \\
+      0.60 & 6 \leq x < 12 \\
+      1 & 12 \leq x 
+   \end{cases}
+\]
+
+(a.) **What is the pmf of X?**
+
+\[ 
+p(x) = \begin{cases}
+      0 & X \ne {1, 3, 4, 6, 12 }\\
+      0.3 & X =  1\\
+      0.1 & X =  3\\
+      0.05 & X =  4\\
+      0.15 & X = 6 \\
+      0.40 & X =  12\\
+   \end{cases}
+\]
+
+(b.) **Using just the cdf, compute P($3\leq X\leq 6$) and P($4\leq X$).**
+
+P($3\leq X\leq 6$)=0.60-0.30=0.30
+P($4\leq X$)=0.45
+
+4. **3.30 : An individual who has automobile insurance from a certain company is randomly selected. Let Y be the number of moving violations for which the individual was cited during the last 3 years. The pmf of Y is** 
+```{r, echo=F}
+y <- c(0, 1, 2, 3)
+p.y <- c(.6, .25, .1, .05)
+df <- data.frame("y" = y, "p.y" = p.y)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("y", "p(y)")
+kable(df_new, col.names = NULL) %>%
+  kable_paper() %>%
+  kable_material(c( "hover"))
+```
+
+(a.) **Compute E(Y).**
+
+E(Y)=$\sum_{all y}^{3} yp(x)$=$0\cdot 0.6+1\cdot 0.25+2\cdot 0.2+3\cdot 0.05$=0.6
+
+(b.) **Suppose an individual with Y violations incurs a surcharge of 100$Y^2$ dollars. Calculate the expected amount of the surcharge.** 
+
+E($100Y^2$)=100E($Y^2$)=100$\sum y^2p(y)$=100($0^2\cdot 0.6+1^2\cdot 0.25+2^2\cdot 0.2+3^2\cdot 0.05$)=100(1.1)=110
+
+5. **3.35 : A small market orders copies of a certain magazine for its magazine rack each week. Let X = demand for the magazine, with pmf.**
+```{r, echo=F}
+x <- c(1:6)
+p.x <- c("1/15", "2/15", "3/15", "4/15", "3/15", "2/15")
+df <- data.frame("x" = x, "p.x" = p.x)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("x", "p(x)")
+kable(df_new, col.names = NULL) %>%
+  kable_paper()%>%
+  kable_material(c( "hover"))
+```
+
+**Suppose the store owner actually pays $2.00 for each copy of the magazine and the price to customers is $4.00. If magazines left at the end of the week have no salvage value, is it better to order three or four copies of the magazine? [Hint: For both three and four copies order, express net revenue as a function of demand X, and then compute the expected revenue.]**
+
+Given the demand for the magazines is X, 
+Let the profit be y, and define the number of magazines ordered to be n. Therefore, 
+\[ 
+y = \begin{cases}
+      4x-2n & n > x \\
+      2n & n \leq x \\
+   \end{cases}
+\]
+```{r, echo=F}
+x <- c(1:6)
+y.3 <- c(-2, 2, 6, 6, 6, 6)
+y.4 <- c(-4, 0, 4, 8, 8, 8)
+df <- data.frame("x" = x, "y.3" = y.3, "y.4" = y.4)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("x", "y when n = 3", "y when n = 4")
+kable(df_new, col.names = NULL, row.names = ) %>%
+  kable_paper() %>%
+  kable_material(c( "hover"))
+```
+
+E[$y_3 (X)$]=$\sum_{i = 1}^{6} yp(x)$=(-2)($\frac{1}{15}$)+(2)($\frac{2}{15}$)+(6)($\frac{3}{15}$)+(6)($\frac{4}{15}$)+(6)($\frac{3}{15}$)+(6)($\frac{2}{15}$)=4.93
+
+E[$y_4 (X)$]=$\sum_{i = 1}^{6} yp(x)$=(-4)($\frac{1}{15}$)+(0)($\frac{2}{15}$)+(4)($\frac{3}{15}$)+(8)($\frac{4}{15}$)+(8)($\frac{3}{15}$)+(8)($\frac{2}{15}$)=5.33
+
+It is better to order 4 copies of magazines because the expected profit is greater than ordering 3 copies. 
+
+6. **3.39 : A chemical supply company currently has in stock 100 lb of a certain chemical, which it sells to customers in 5lb batches. Let X = the number of batches ordered by a random chosen customer, and suppose that X has pmf.**
+```{r, echo=F}
+z <- c(1:4)
+p.z <- c(.2, .4, .3, .1)
+df <- data.frame("z" = z, "p.z" = p.z)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("z", "p(z)")
+kable(df_new, col.names = NULL) %>%
+  kable_paper()%>%
+  kable_material(c( "hover"))
+```
+
+**Compute E(X) and V(X). Then compute the expected number of pounds left after the next customer’s order is shipped and the variance of the number of pounds left. [Hint: The number of pounds left is a linear function of X.]**
+
+E(X)=$\sum zp(z)$=(1)(0.2)+(2)(0.4)+(3)(0.3)+(4)(0.1)=2.3
+
+E($X^2$)=$\sum z^2 p(z)$=(1)(0.2)+(4)(0.4)+(9)(0.3)+(16)(0.1)=6.1
+
+V(X)=E($X^2$)-$[E(x)]^2$=6.1-$2.3^2$=0.81
+
+Given X is the number of batches order,
+Let y be the lb’s of a certain chemical currently in stock. 
+Then, 
+
+y = 100-5
+```{r, echo=F}
+z <- c(1:4)
+y <- c(95, 90, 85, 80)
+df <- data.frame("z" = z, "y" = y)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+kable(df_new, col.names = NULL) %>%
+  kable_paper()%>%
+  kable_material(c( "hover"))
+```
+
+E(Y)=$\sum yp(z)$=(95)(0.2)+(90)(0.4)+(85)(0.3)+(80)(0.1)=88.5
+
+E($Y^2$)=$\sum y^2 p(z)$=(9025)(0.2)+(8100)(0.4)+(7225)(0.3)+(6400)(0.1)=7852.5
+
+V(Y) = E($Y^2$) - $[E(Y)]^2$ = 7852.5 - $88.5^2$ = 20.25
 
 # Homework 5
 
+coming soon . . . 
