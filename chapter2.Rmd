@@ -27,7 +27,9 @@ output:
 
 > ![](img/fig2.1.png)
 
+<center>
 >![](img/vendiagrams.png)
+</center>
 
 ## Theorems and Axioms 
 
@@ -50,5 +52,6 @@ output:
 > **Proposition : **For any event A, $P(A)\leq 1$.
 
 > **Proposition : **For any two events A and B, $$P(A\cup B)=P(A)+P(B)-P(A\cap B)$$
-
-
+<center>
+>![](img/fig2.4.png)
+</center>

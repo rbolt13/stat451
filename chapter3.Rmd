@@ -102,7 +102,7 @@ Let $X$ be the damage incurred (in dollars) in a certain type of accident during
 
 X = Damage incurred 
 
-Y = h(x) = Amount the company pays
+Y = h(x) = Amount the company pays = x - 500
 
 ```{r, echo = F}
 x <- c(0, 1000, 5000, 10000)
@@ -129,6 +129,14 @@ kable(df.new, col.names = NULL) %>%
   kable_paper()
 ```
 a. **Compute $E(X)$, $E(X^2)$, and $V(X)$.**
+
+E[x] = 16(0.2) + 18(0.5) + 20(0.3) = 3.2 + 9 + 6 = 18.2
+
+E[$x^2$] = $16^2$(0.2) + $18^2$(0.5) + $20^2$(0.3) = 333.2
+
+$\sigma ^2$ = Var(x) = E[$x^2$]-$[E[x]]^2$ = 333.2 - $18.2)^2$ = 1.96
+
+$\sigma$= 1.4
 
 b. **If the price of a freezer having capacity of $X$ is $70X-650$, what is the expected price paid by the next customer to buy a freezer?** 
 

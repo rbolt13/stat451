@@ -1,0 +1,83 @@
+---
+title: "3 : Homework"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'homework3.html'))})
+output: 
+  html_document: rmdformats::readthedown
+---
+```{r, echo=F, message=F}
+library(dplyr)
+library(kableExtra) # highlights table when hover over a line
+```
+
+# Homework 4
+1. **3.12 : Airlines sometimes overbook flights. Suppose that for a plane with 50 seats, 55 passengers have tickers. Define the random variable Y as the number of ticketed passengers who actually show up for the flight. The probability mass function of Y appears in the accompanying table.** 
+```{r, echo=F}
+y <- c(45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55)
+p.y <- c(0.05, 0.10, 0.12, 0.14, 0.25, 0.17, 0.06, 0.05, 0.03, 0.02, 0.01)
+df <- data.frame("y" = y, "p.y" = p.y)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+kable(df_new, col.names = NULL) %>%
+  kable_paper()
+```
+(a.) **What is the probability that the flight will accommodate all ticketed passengers who show up?**
+
+P($y\leq50$)=(0.05+0.10+0.12+0.14+0.25+0.17)=0.83
+
+(b.) **What is the probability that not all ticketed passengers who show up can be accommodated?**
+
+P(y>50)=1-P($y\leq50$)=1-0.83=0.17
+
+(c.) **If you are the first person on the standby list (which means you be the first one to get on the plane if there are any seats available after all ticketed passengers have been accommodated), what is the probability that you will be able to take the flight? What is this probability if you are the third person on the standby list?**
+
+P(y<50)=(0.05+0.10+0.12+0.14+0.25)=0.66
+P(y<48)=(0.05+0.10+0.12)=0.27
+
+2. **3.22 : Refer to Exercise 13, and calculate and graph the cdf F(x). Then use it to calculate the probabilities of the events given in part (a), part (b), part (c), part (d) of that problem. **
+
+**13. A mail-order computer business has six telephone lines. Let X denote the number of lines in use at a specified time. Suppose the pmf of X is as given in the accompanying table. **
+```{r, echo=F}
+x <- c(0:6)
+p.x <- c(0.10, 0.15, 0.20, 0.25, 0.20, 0.06, 0.04)
+df <- data.frame("x" = x, "p.x" = p.x)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+kable(df_new, col.names = NULL) %>%
+  kable_paper()
+```
+\usepackage{amsmath}
+\[ 
+F_x(x) = \begin{cases}
+      0 & x < 0 \\
+      0.10 & 0 \leq x < 1 \\
+      0.25 & 1 \leq x < 2 \\
+      0.45 & 2 \leq x < 3 \\
+      0.70 & 3 \leq x < 4 \\
+      0.90 & 4 \leq x < 5 \\
+      0.96 & 5 \leq x < 6 \\
+      1 & 6 \leq x 
+   \end{cases}
+\]
+```{r, echo=F}
+x <- c(0,0,1,2,3,4, 5, 6)
+y <- c(0,0.1,.25,.45,.7,.9,.96,1)
+lines <- data.frame("x" = x, "y" = y)
+plot(lines, main = "cdf of F(x)",
+     ylab = "Cummulative Distribution",
+     xlab = "Lines in Use (at one time)")
+```
+
+(a.) **{at most three lines are in use}**
+
+(b.) **{fewer than three lines are in use}**
+
+(c.) **{at least three lines are in use}**
+
+(d.) **{between two and five lines, inclusive, are in use}**
+
+# Homework 5
+

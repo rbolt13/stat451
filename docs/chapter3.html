@@ -143,6 +143,9 @@
         <a href="chapter3.html">3 : DRV and Distributions</a>
       </li>
       <li>
+        <a href="homework3.html">3 : Homework</a>
+      </li>
+      <li>
         <a href="contact.html">Contact</a>
       </li>
             </ul>
@@ -285,7 +288,7 @@ b(x;n,p) = \begin{cases}
 <h3>Exercise 36 (page 116)</h3>
 <p>Let <span class="math inline">\(X\)</span> be the damage incurred (in dollars) in a certain type of accident during a given year. Possible <span class="math inline">\(X\)</span> values are 0, 1000, 5000, 10000, with probabilities of 0.8, 0.1, 0.08, 0.02, respectively. A particular company offers a 500 dollars deductible policy. If the company wishes its expected profit to be 100 dollars, what premium amount should it charge?</p>
 <p>X = Damage incurred</p>
-<p>Y = h(x) = Amount the company pays</p>
+<p>Y = h(x) = Amount the company pays = x - 500</p>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -379,7 +382,13 @@ p.x
 </tbody>
 </table>
 <ol style="list-style-type: lower-alpha">
-<li><p><strong>Compute <span class="math inline">\(E(X)\)</span>, <span class="math inline">\(E(X^2)\)</span>, and <span class="math inline">\(V(X)\)</span>.</strong></p></li>
+<li><strong>Compute <span class="math inline">\(E(X)\)</span>, <span class="math inline">\(E(X^2)\)</span>, and <span class="math inline">\(V(X)\)</span>.</strong></li>
+</ol>
+<p>E[x] = 16(0.2) + 18(0.5) + 20(0.3) = 3.2 + 9 + 6 = 18.2</p>
+<p>E[<span class="math inline">\(x^2\)</span>] = <span class="math inline">\(16^2\)</span>(0.2) + <span class="math inline">\(18^2\)</span>(0.5) + <span class="math inline">\(20^2\)</span>(0.3) = 333.2</p>
+<p><span class="math inline">\(\sigma ^2\)</span> = Var(x) = E[<span class="math inline">\(x^2\)</span>]-<span class="math inline">\([E[x]]^2\)</span> = 333.2 - <span class="math inline">\(18.2)^2\)</span> = 1.96</p>
+<p><span class="math inline">\(\sigma\)</span>= 1.4</p>
+<ol start="2" style="list-style-type: lower-alpha">
 <li><p><strong>If the price of a freezer having capacity of <span class="math inline">\(X\)</span> is <span class="math inline">\(70X-650\)</span>, what is the expected price paid by the next customer to buy a freezer?</strong></p></li>
 <li><p><strong>What is the variance of the price paid by the next custormer?</strong></p></li>
 <li><p><strong>Suppose that although the rated capacity of a freezer is <span class="math inline">\(X\)</span>, the actual capacity is <span class="math inline">\(h(X)=X-0.008X^2\)</span>. What is the expected actual capacity of the freezer purchased by the next customer?</strong></p></li>

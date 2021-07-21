@@ -14,6 +14,8 @@ navbar:
       href: chapter2.html
     - text: "3 : DRV and Distributions"
       href: chapter3.html
+    - text: "3 : Homework"
+      href: homework3.html
     - text: "Contact"
       href: contact.html
 ---
