@@ -12,10 +12,12 @@ navbar:
       href: chapter1.html
     - text: "2 : Probability"
       href: chapter2.html
-    - text: "3 : DRV and Distributions"
+    - text: "3 : DRV"
       href: chapter3.html
-    - text: "3 : Homework"
+    - text: "3 : HW"
       href: homework3.html
+    - text: "4 : CRV"
+      href: chapter4.html
     - text: "Contact"
       href: contact.html
 ---

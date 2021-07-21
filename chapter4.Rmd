@@ -1,0 +1,39 @@
+---
+title: "Chapter 4 : Continuous Random Variables and Probability Distibutions"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'chapter4.html'))})
+output: 
+  html_document: rmdformats::readthedown
+---
+
+# Definitions
+
+> Let $X$ be a continuous random variable. Then a **probability distribution** or **probability density function** (pdf) of $X$ is a funciton $f(x)$ such that any two numbers a and b with $a\leq b$, $$P(\alpha \leq X \leq b) = \int_{a}^{b} f(x) dx$$ That is, the probability that $X$ takes on a value in the interval $[a,b]$ is the area above this interval and under the graph of the density funciton, as illustrated in **Figure 4.2** . The graph of $f(x)$ is often referred to as the *density curve*.  
+<center>
+![](img/fig4.2.png)
+</center>
+
+> A continuous random variable $X$ is said to have a **uniform distribution** on the interval $[A,B]$ if the pdf of $X$ is $$f(x;A,B) = { \frac{1}{B-A} : A \leq x \leq B , 0 : otherwise} $$
+
+> The **cumulative distribution funciton** $F(x)$ for a continuous random variable $X$ is defined for ever number $x$ by $$F(x) = P(X \leq x ) \ \int_{- \infty}^{x} f(y)dy $$ For each $x, F(x)$ is the area under the density curve to the left of x. This is illustrated in **Figure 4.5**, where $F(x)$ increases smoothly as x increases. 
+<center>
+![](img/fig4.5.png)
+</center>
+
+<center>
+![](img/fig4.6and7.png)
+</center>
+
+# Theorems
+
+> **Proposition** : Let $X$ be a continuous random variable with pdf $f(x)$ and cdf $F(x)$. Then for any number $a$, $$P(X>a)=1-F(a)$$ and for any two numbers a and b with $a<b$, $$P(a \leq X \leq b) = F(b)-F(a)$$
+
+<center>
+!{}()
+</center>
+
+
+# Examples
