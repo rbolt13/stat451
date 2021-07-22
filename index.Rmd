@@ -51,7 +51,7 @@ Current <- c("This page tells a little about the site, and the updates on each p
 Tasks <- c("This page is up to date.",
            "Will fill this page out at the end of the term.",
            "Will fill this page out at the end of the term.",
-           "A few examples aren't finished, and a couple images could be replaced with text.",
+           "A few examples aren't finished, and a couple images could be replaced with text. Missing day 7 examples.",
            "Post Homework 5",
            "Definitions, Theorems, Examples",
            "This page is up to date.")
