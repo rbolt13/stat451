@@ -261,7 +261,12 @@ f. **at least four lines are not in use**
 
 0.45
 
-### Exercise 14 (page)
+### Exercise 14 (page 108)
+![](img/3.14.png)
+
+$\sum{}^{5} k(y)$=1=k(1+2+3+4+5)=15k
+
+$k=\frac{1}{15}$
 
 ### Exercise 36 (page 116)
 Let $X$ be the damage incurred (in dollars) in a certain type of accident during a given year. Possible $X$ values are 0, 1000, 5000, 10000, with probabilities of 0.8, 0.1, 0.08, 0.02, respectively. A particular company offers a 500 dollars deductible policy. If the company wishes its expected profit to be 100 dollars, what premium amount should it charge?  
@@ -310,9 +315,10 @@ c. **What is the variance of the price paid by the next custormer?**
 
 d. **Suppose that although the rated capacity of a freezer is $X$, the actual capacity is $h(X)=X-0.008X^2$. What is the expected actual capacity of the freezer purchased by the next customer?** 
 
+---
 
 ### In Class Example (7-15-2021)
-Suppose that the probaility of giving birth to a femal is $\frac{1}{2}$. A family decides to have children until they have a son. What is the probability of giving birth to 3 females before a son is born? 
+Suppose that the probability of giving birth to a femal is $\frac{1}{2}$. A family decides to have children until they have a son. What is the probability of giving birth to 3 females before a son is born? 
 
 $x$ = Number of females until a son is born
 
