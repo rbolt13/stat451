@@ -40,11 +40,19 @@ library(kableExtra) # highlights table when hover over a line
 
 > Let $X$ have pmf p(x) and expected value $\mu$. Then the **variance** of $X$, denoted by $V(X)$ or $\sigma_{X}^2$ or just $\sigma ^2$, is $$V(X)=\sum_{D}^{} (x-\mu)^2 \cdot p(x)=E(X-\mu)^2]$$ The **standard deviation** (SD) of X is $$\sigma x \sqrt{ \sigma_{X}^2}$$ 
 
-> An experiment for which **Condition 1**, **Condition 2**, *Condition 3**, **Condition 4** (a fixed number of dichotomous, independent, homogenous trials) are satisfied is called a **binomial experiment**.  
+> An experiment for which **Condition 1**, **Condition 2**, **Condition 3**, **Condition 4** (a fixed number of dichotomous, independent, homogenous trials) are satisfied is called a **binomial experiment**.  
 
 > The **binomial random variable X** associated with a binomial experiment consisting of $n$ trials is defined as $X =$ the number of S's among the n trials.
 
 * because the pmf of a binomial random variable X depends on the two parameters $n$ and $p$, we denote the pmf by $b(x;n,p)$
+
+> The random variable of interest is X = the number of failures that preced the rth success; X is called a **negative binomial random variable** because, in contrast to the binomial rv, the number of successes is fixed and the number of trials is random. 
+
+> Both X = number of F's and Y = number of tirals $(=1+X)$ are referred to in the literature as **geometric random variables**, with its corresponding pmf called the **geometric distributions**
+
+* $Y = X - Y
+
+> A discrete random variable X is said to have a **Poisson distribution** with parameter $\mu (\mu >0)$ if the pmf of X is $$P(x;\mu )=\frac{e^{-\mu}\cdot \mu ^{x}}{x!}$$ $x=0,1,2,3,....$
 
 ## Theorems
 
@@ -95,7 +103,76 @@ b(x;n,p) = \begin{cases}
 
 > **Proposition - Mean and Variance of Hypergeometric Distribution : **The mean and variance of the hypergeometric rv $X$ having pmf $h(x;n,M,N)$ are $$E(x)=n\cdot\frac{M}{N}$$  $$V(X)=(\frac{N-n}{N-1})\cdot n\cdot \frac{M}{N}\cdot (1-\frac{M}{N})$$
 
+> **Proposition - pmf of the negatiative binomial: **The pmf of the negative binomial rv X with parameters r = number of S's and $p=P(S)$ is $$nb(x;r,p)={x+r-1\choose r-1}p^{r}(1-p)^{x}$$ x = 1,2, ...
+
+> **Proposition - Expected Value and Variance of a Negative Binomial :** If X is a negative binomial rv with pmf $nb(x;r,p)$, then $$E(X)=\frac{r(1-p)}{p}$$ $$ V(X)=\frac{r(1-P)}{p^{2}}$$
+
+> **Proposition - The Poisson Disribution as a Limit :** Suppose that in  the binomial pmf $b(x;n,p)$, we let $n\rightarrow \infty$ and $p\rightarrow 0$ in such a way that $np$ approaches a value $\mu > 0$ . Then $b(x;n,p)\rightarrow p(x;\mu)$
+
+> **Proposition - The Mean and Variance of X for Poisson Distribution :** If X has a poisson distribution with parameter $\mu$ , then $E(X)=V(X)=\mu$ .
+
+> **Assumptions - The Poisson Process :** 
+> ![](img/3.6pp.png)
+
+> **Proposition - Poisson Process Expected Number :** $P_{k}(t)=e^{-\alpha t}\cdot \frac{(\alpha t)^{k}}{k!}$ , so that the number of events during a time interval of length t is a Poisson rv with parameter $\mu = \alpha t$ . The expected number of events during any such time interval is then $\alpha t$ , so the expected number during a unit interval of time is $\alpha$ .
+
 # Examples
+
+### In Class Example 1 : (7-8-2021)
+\[ 
+p(x) = \begin{cases}
+      {4\choose 4}p^x (1-p)^{4-x} & x =0,1,2,3, 4 \\
+      0 &\text{otherwise}\
+   \end{cases}
+\]
+```{r, echo=F}
+x <- c(0:4)
+p.x <- c("1/16", "4/16", "6/16", "4/16", "1/16")
+df <- data.frame("x" = x, "p.x" = p.x)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("x", "p(x)")
+kable(df_new, col.names = NULL, align = "cccccc") %>%
+  kable_paper()%>%
+  kable_material(c( "hover")) %>%
+  column_spec(1, bold = T, border_right = T) 
+```
+
+Suppose $p=\frac{1}{4} = 0.25$
+
+$p(0)={4\choose 0}(0.25)^{0}(0.75)^{4}=0.316$
+
+$p(0)={4\choose 1}(0.25)^{1}(0.75)^{3}=0.420$
+
+$p(0)={4\choose 2}(0.25)^{2}(0.75)^{2}=0.211$
+
+$p(0)={4\choose 3}(0.25)^{3}(0.75)^{1}=0.047$
+
+$p(0)={4\choose 4}(0.25)^{4}=0.004$
+
+### In Class Example 2 : (7-8-2021)
+***A shipment of 7 TV sets contains 2 defective TV's. A random sample of 3 TV's is tested. Let X = the number of defective TV's in the sample. x is a discrete r.v.** 
+```{r, echo=F}
+x <- c(0:2)
+p.x <- c("2/7", "4/7", "1/7")
+df <- data.frame("x" = x, "p.x" = p.x)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("x", "p(x)")
+kable(df_new, col.names = NULL, align = "cccccc") %>%
+  kable_paper()%>%
+  kable_material(c( "hover")) %>%
+  column_spec(1, bold = T, border_right = T) 
+```
+
+$p(0)=P[X=0]=\frac{{5\choose 3}}{{7\choose 3}}=\frac{2}{7}$
+
+$p(0)=P[X=1]=\frac{{2\choose 1}{5\choose 3}}{{7\choose 3}}=\frac{4}{7}$
+
+$p(0)=P[X=2]=\frac{{2\choose 2}{5\choose 2}}{{7\choose 3}}=\frac{1}{7}$
+
+$p(0)=P[X=x]=\frac{{2\choose x}{5\choose 3-x}}{{7\choose 3}}, x = 0 , 1, 2$
+
 
 ### Exercise 36 (page 116)
 Let $X$ be the damage incurred (in dollars) in a certain type of accident during a given year. Possible $X$ values are 0, 1000, 5000, 10000, with probabilities of 0.8, 0.1, 0.08, 0.02, respectively. A particular company offers a 500 dollars deductible policy. If the company wishes its expected profit to be 100 dollars, what premium amount should it charge?  
