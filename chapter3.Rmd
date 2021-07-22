@@ -173,6 +173,95 @@ $p(0)=P[X=2]=\frac{{2\choose 2}{5\choose 2}}{{7\choose 3}}=\frac{1}{7}$
 
 $p(0)=P[X=x]=\frac{{2\choose x}{5\choose 3-x}}{{7\choose 3}}, x = 0 , 1, 2$
 
+### Exercise 24 (page 108)
+![](img/3.24.png)
+
+```{r, echo=F}
+x <- c("1", "3", "4", "6", "12")
+p.x <- c("0.30", "0.10", "0.05", "0.15", "0.40")
+df <- data.frame("x" = x, "p.x" = p.x)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("x", "p(x)")
+kable(df_new, col.names = NULL, align = "cccccc") %>%
+  kable_paper()%>%
+  kable_material(c( "hover")) %>%
+  column_spec(1, bold = T, border_right = T) 
+```
+
+b. $P[x\leq x\leq 6]=P[x\leq 6]-P[x<3]$=F(6)-F(3-)=0.60 - 0.30 = 0.30
+
+### Exercise 13 (page 108)
+Two fair six-sided dice are tossed independetly. Let M = the maximum of the two tosses (so M(1,5) = 5, M(3,3) = 3, ect.)
+
+a. **What is the pmf of M? [Hint: First determine $p(1)$, then $p(2)$, and so on.]**
+
+p(1)=p[M=1]=p(1,1)=p[1 with the frist die] x p[1 with the second die] = $\frac{1}{6} \cdot \frac{1}{6}=\frac{1}{36}$
+
+p(2)=p[M=2]=p((1,2), (2,1), (2,2))=$\frac{1}{36}+ \frac{1}{36}+ \frac{1}{36} =\frac{3}{36}$
+
+p(3)=p[M=3]=p((1,3), (2,3), (3,3), (3,1), (3,2))= $\frac{5}{36}
+
+p(3)=p[M=3]=p((1,4), (2,4), (3,4), (4,4), (4,1), (4,2), (4,3))= $\frac{7}{36}
+
+p(5)= $\frac{9}{36}$
+
+p(6)= $\frac{11}{36}$
+
+```{r, echo=F}
+x <- c(1:6)
+p.x <- c("1/36", "3/36", "5/36", "7/36", "9/36", "11/36")
+df <- data.frame("x" = x, "p.x" = p.x)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("M", "p(m)")
+kable(df_new, col.names = NULL, align = "cccccc") %>%
+  kable_paper()%>%
+  kable_material(c( "hover")) %>%
+  column_spec(1, bold = T, border_right = T) 
+```
+
+b. **Determine the cdf of M and graph it. ** 
+
+### Exercise 13 (page 108)
+A mail-order computer buisness has six telephone lines. Let X denote the numebrof lines in use at a specified time. Suppose the pmf of X is given in the accompanying table. 
+```{r, echo=F}
+x <- c(0:6)
+p.x <- c("0.10", "0.15", "0.20", "0.25", "0.20", "0.06", "0.04")
+df <- data.frame("x" = x, "p.x" = p.x)
+df_new <- as.data.frame(t(df))
+options(scipen = 50) # get rid of e's
+rownames(df_new) <- c("x", "p(x)")
+kable(df_new, col.names = NULL, align = "cccccc") %>%
+  kable_paper()%>%
+  kable_material(c( "hover")) %>%
+  column_spec(1, bold = T, border_right = T) 
+```
+a. **at most three lines are in use**
+
+P[$3\leq 3$]=p(0)+p(1)+p(2)+p(3)=0.1+0.15+0.2+0.25=0.7
+
+b. **fewer than three lines are in use**
+
+P[$x<3$]=0.45
+
+c. **at least three lines are in use**
+
+P[$x\geq 3$]=1-P[$x<3$]=0.55
+
+d. **between two and five lines, inclusive, are in use**
+
+P[$2<x\leq 5$]=p(2)+p(3)+p(4)+p(5)=0.71
+
+e. **between two and four lines, inclusive, are not in use**
+
+= 0.65
+
+f. **at least four lines are not in use** 
+
+0.45
+
+### Exercise 14 (page)
 
 ### Exercise 36 (page 116)
 Let $X$ be the damage incurred (in dollars) in a certain type of accident during a given year. Possible $X$ values are 0, 1000, 5000, 10000, with probabilities of 0.8, 0.1, 0.08, 0.02, respectively. A particular company offers a 500 dollars deductible policy. If the company wishes its expected profit to be 100 dollars, what premium amount should it charge?  
@@ -195,7 +284,7 @@ kable(damage.payout_new, col.names = NULL) %>%
 E[Y]=0(0.8) + 500(0.1) + 4500(0.08) + 9500(0.02) = 600 dollars
 
 ### Exercise 32 (page 16)
-A certian brand of upright freezer is available in three different rated capacities: $16ft^3$, $18ft^3$, and $20ft^3$. Let $X=$ the rated capacity of a freezer of this brand sold at a certain store. Suppose that $X$ has pmf: 
+A certain brand of upright freezer is available in three different rated capacities: $16ft^3$, $18ft^3$, and $20ft^3$. Let $X=$ the rated capacity of a freezer of this brand sold at a certain store. Suppose that $X$ has pmf: 
 ```{r, echo=F}
 x <- c(16,18,20)
 p.x <- c(0.2,0.5,0.3)

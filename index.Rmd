@@ -8,6 +8,10 @@ knit: (function(input_file, encoding) {
 output: 
   html_document: rmdformats::readthedown
 ---
+```{r, echo = F, message=F}
+library(dplyr)
+library(kableExtra)
+```
 
 # About
 This site was made by Randi Bolt, an undergrad mathematics and statistics student at Portland State University for Statistics - 451 : Applied Statistics for Engineers and Scientists during the Summer of 2021. Most of the definitions,  theorems, example problems and homework problems are from the book *Probability and Statistics for Engineering and the Sciences, Enhanced Edition, 9th ed.*, with some class examples and notes from Subhash Kochar. Other than that the rest of the site and work (both in homework and examples) is my own. 
@@ -19,4 +23,44 @@ Each chapter is divided into three sections : Definitions, Theorems, and Example
 For questions, comments, or curiosity check out the contact page for my email, and other projects I have worked on during my undergraduate degree. 
 
 Enjoy :D
+
+# Updates 
+As of July 15th this site is live, and updated regularly. Check the table below for updates on each page : 
+```{r, echo=F}
+site.urls <- c("https://rbolt13.github.io/stat451/index.html",
+               "https://rbolt13.github.io/stat451/chapter1.html",
+               "https://rbolt13.github.io/stat451/chapter2.html",
+               "https://rbolt13.github.io/stat451/chapter3.html",
+               "https://rbolt13.github.io/stat451/homework3.html",
+               "https://rbolt13.github.io/stat451/chapter4.html",
+               "https://rbolt13.github.io/stat451/contact.html")
+Links <- c("Home",
+          "1 : Statistics",
+          "2 : Probability",
+          "3 : DRV",
+          "3 : HW",
+          "4 : CRV",
+          "Contact")
+Current <- c("This page tells a little about the site, and the updates on each page.",
+             "No content on this page.",
+             "There are a few definitions and axioms availble from chapter 2.",
+             "This page has Definitions, Theorems, and Examples from chapter 3.",
+             "This page has my work from chapter 3, homework 4.",
+             "There are a few definitions and axioms available from chapter 4.",
+             "Here is where you can find my email address and links to other projects I've worked on. ")
+Tasks <- c("This page is up to date.",
+           "Will fill this page out at the end of the term.",
+           "Will fill this page out at the end of the term.",
+           "A few examples aren't finished, and a couple images could be replaced with text.",
+           "Post Homework 5",
+           "Definitions, Theorems, Examples",
+           "This page is up to date.")
+
+# Data Frame
+y <- data.frame(Links, Current, Tasks)
+y$Links <- paste0("[", y$Links, "](", site.urls, ")")
+kable(y) %>%
+  kable_paper("hover", full_width = F) %>%
+  row_spec(0, background = "white")
+```
 
