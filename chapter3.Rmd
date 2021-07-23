@@ -103,7 +103,7 @@ b(x;n,p) = \begin{cases}
 
 > **Proposition - Mean and Variance of Hypergeometric Distribution : **The mean and variance of the hypergeometric rv $X$ having pmf $h(x;n,M,N)$ are $$E(x)=n\cdot\frac{M}{N}$$  $$V(X)=(\frac{N-n}{N-1})\cdot n\cdot \frac{M}{N}\cdot (1-\frac{M}{N})$$
 
-> **Proposition - pmf of the negatiative binomial: **The pmf of the negative binomial rv X with parameters r = number of S's and $p=P(S)$ is $$nb(x;r,p)={x+r-1\choose r-1}p^{r}(1-p)^{x}$$ x = 1,2, ...
+> **Proposition - pmf of the negative binomial: **The pmf of the negative binomial rv X with parameters r = number of S's and $p=P(S)$ is $$nb(x;r,p)={x+r-1\choose r-1}p^{r}(1-p)^{x}$$ x = 1,2, ...
 
 > **Proposition - Expected Value and Variance of a Negative Binomial :** If X is a negative binomial rv with pmf $nb(x;r,p)$, then $$E(X)=\frac{r(1-p)}{p}$$ $$ V(X)=\frac{r(1-P)}{p^{2}}$$
 
