@@ -16,23 +16,29 @@ output:
 ![](img/fig4.2.png)
 </center>
 
+* $f(x)=\frac{d}{dx}F(x)$ : find pdf by differentiating cdf
+
+* $F(x)=\int_{-\infty}^{x}f(t)dt$ : find cdf by integrating pdf
+
+*x is fixed point, do not use x within the funtion that being integrated (use dummy variable t)
+
 > A continuous random variable $X$ is said to have a **uniform distribution** on the interval $[A,B]$ if the pdf of $X$ is $$f(x;A,B) = { \frac{1}{B-A} : A \leq x \leq B , 0 : otherwise} $$
-
-> The **cumulative distribution funciton** $F(x)$ for a continuous random variable $X$ is defined for ever number $x$ by $$F(x) = P(X \leq x ) \ \int_{- \infty}^{x} f(y)dy $$ For each $x, F(x)$ is the area under the density curve to the left of x. This is illustrated in **Figure 4.5**, where $F(x)$ increases smoothly as x increases. 
-<center>
-![](img/fig4.5.png)
-</center>
-
 <center>
 ![](img/fig4.6and7.png)
+</center>
+
+* continuous at all possible values of interval
+
+> The **cumulative distribution function** $F(x)$ for a continuous random variable $X$ is defined for ever number $x$ by $$F(x) = P(X \leq x ) \ \int_{- \infty}^{x} f(y)dy $$ For each $x, F(x)$ is the area under the density curve to the left of x. This is illustrated in **Figure 4.5**, where $F(x)$ increases smoothly as x increases. 
+<center>
+![](img/fig4.5.png)
 </center>
 
 # Theorems
 
 > **Proposition** : Let $X$ be a continuous random variable with pdf $f(x)$ and cdf $F(x)$. Then for any number $a$, $$P(X>a)=1-F(a)$$ and for any two numbers a and b with $a<b$, $$P(a \leq X \leq b) = F(b)-F(a)$$
-
 <center>
-!{}()
+![](img/fig4.8.png)
 </center>
 
 
@@ -42,7 +48,7 @@ output:
 **The current in a certain circuit as measured by an ammeter is a continuous random variable X with the following density function:** 
 \[ 
 f(x) = \begin{cases}
-      0.75x +0.2 & 3\leq x\leq 5 \\
+      0.075x +0.2 & 3\leq x\leq 5 \\
       0 &\text{otherwise}\
    \end{cases}
 \]
@@ -51,17 +57,41 @@ a. **Graph the pdf and verify that the total area under the density curve is ind
 ```{r, echo=F}
 curve(0.075*x+0.2,3,5, ylim = c(0,0.75), ylab = "y")
 ```
-
-$\int_{-\infty}^{\infty}f(x)dx=\int_{-\infty}^{3}0+\int_{3}^{5}(0.075x+0.2)dx+\int_{5}^{\infty}0$
-=$\frac{0.075x^2}{2}|_{3}^{3}$+$0.2(5-3)$
-=$\frac{0.75*5^2}{2}-\frac{0.75*3^2}{2}+0.4$
-=1
+\begin{equation} \label{eq1}
+\begin{split}
+\int_{-\infty}^{\infty}f(x)dx & =\int_{-\infty}^{3}0+\int_{3}^{5}(0.075x+0.2)dx+\int_{5}^{\infty}0\\
+& =\frac{0.075x^2}{2}|_{3}^{3}+0.2(5-3)\\
+& =\frac{(0.75)5^2}{2}-\frac{(0.75)3^2}{2}+0.4\\
+& =1
+\end{split}
+\end{equation}
 
 b. **Calculate $P(X\leq 4)$. How does this probability compare to P($X<4$)?**
 
-= 0.4625, same
+\begin{equation} \label{eq2}
+\begin{split}
+P(X\leq 4) & =\int_{-\infty}^{4}f(x)dx\\
+& =0+\int_{3}^{4}(0.70x+0.2)dx\\
+& =\frac{0.075x^2}{2}+0.2|_{3}^{4}\\
+& =0.4625
+\end{split}
+\end{equation}
+
+$P(X\leq 4)=P(X<4)$
 
 c. **Calculate $P(3.5\leq X\leq 4.5)$ and also P($4.5<X$).**
+
+\begin{equation} \label{eq3}
+\begin{split}
+P(3.5\leq X\leq 4.5) & =\int_{3.5}^{4.5}f(x)dx\\
+& =0.075\frac{x^2}{2}|_{3.5}^{4.5}+0.2\\
+& =0.075(\frac{4.5^2}{2}-\frac{3.5^2}{2})+0.2\\
+& =0.075(10.125-6.125)+0.2\\
+& =0.5
+\end{split}
+\end{equation}
+
+$P(X<4.5)=0.278125$
 
 0.5, 0.278125
  
