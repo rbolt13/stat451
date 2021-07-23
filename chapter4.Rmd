@@ -37,3 +37,72 @@ output:
 
 
 # Examples
+
+### Exercise 1 (page 146)
+**The current in a certain circuit as measured by an ammeter is a continuous random variable X with the following density function:** 
+\[ 
+f(x) = \begin{cases}
+      0.75x +0.2 & 3\leq x\leq 5 \\
+      0 &\text{otherwise}\
+   \end{cases}
+\]
+
+a. **Graph the pdf and verify that the total area under the density curve is indeed 1.** 
+```{r, echo=F}
+curve(0.075*x+0.2,3,5, ylim = c(0,0.75), ylab = "y")
+```
+
+$\int_{-\infty}^{\infty}f(x)dx=\int_{-\infty}^{3}0+\int_{3}^{5}(0.075x+0.2)dx+\int_{5}^{\infty}0$
+=$\frac{0.075x^2}{2}|_{3}^{3}$+$0.2(5-3)$
+=$\frac{0.75*5^2}{2}-\frac{0.75*3^2}{2}+0.4$
+=1
+
+b. **Calculate $P(X\leq 4)$. How does this probability compare to P($X<4$)?**
+
+= 0.4625, same
+
+c. **Calculate $P(3.5\leq X\leq 4.5)$ and also P($4.5<X$).**
+
+0.5, 0.278125
+ 
+### Exercise 31 (page 155)
+**Let X denoter the amount of time a book on two-hour reserve is actually checked out, and suppose the cdf is:** 
+\[ 
+F(x) = \begin{cases}
+      0 & x<0 \\
+      \frac{x^2}{4} &0\leq x<2\\
+      1 & 2\leq x\
+   \end{cases}
+\]
+a. **Calculate $P(X\leq1)$.**
+
+= 0.25
+
+b. **Calculate $P(0.5\leq X\leq1)$.**
+
+= 0.1875
+
+c. **Calculate $P(X>1.5)$.**
+
+= 0.4375
+
+d. **What is the median checkout duration? $\widetilde{\mu}$ . [solve $0.5=F(\widetilde{\mu})$].**
+
+= 1.4142
+
+e. **Obtain the density function $f(x)$ .**
+
+f(x)=x/2 for 0<x<2
+
+f. **Calculate E(X) .**
+
+1.33
+
+g. **Calculate V(X) and $\sigma x$ .**
+
+= 0.222, 0.471
+
+h. **If the borrower is charged an amount $h(X)=X^2$ when checkout duration is X, compute the expected charge $E[h(X)]$.**
+
+= 2
+
