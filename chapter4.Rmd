@@ -61,6 +61,16 @@ F(X) = \begin{cases}
 
 > The **standard deviation** (SD) of X is $\sigma_{X}=\sqrt{V(X)}$
 
+> A continuous rv X is said to have a **normal distribution** with parameters $\mu$ and $\sigma$ (or $\mu$ and $\sigma ^2$), where$-\infty < \mu < \infty$ and $0<\infty$, if the pdf of X is $$f(x;\mu ,\sigma )=\frac{1}{\sqrt{2\pi }\sigma }e^{\frac{-(x-\mu)^2}{{(2\sigma ^2)}}}\quad{-\infty <x<\infty}$$ 
+
+> The normal distribution with parameter values $\mu = 0$ and $\sigma =1$ is called the **standard normal distribution**. A rv having a standard normal distribution is called a **standard normal random variable** and will be denoted by $Z$. the pdf of $Z$ is $$f(x;0,1)=\frac{1}{\sqrt{2\pi }}e^{\frac{-z^2}{2}}\quad{-\infty <x<\infty}$$
+> The graph of $f(z;0,1)$ is called the *standard normal* (or $\mathscr{z}$) curve. Its inflections points are at 1 and -1. The cdf of Z is $P(Z\leq z)=\int_{-\infty}^{z}f(y;0,1)dy$ , which we will denote by $\Phi (\mathscr{z})$ .
+<center>
+![](img/fig4.14.png)
+</center>
+
+* ![](img/fig4.16.png)
+
 # Theorems
 
 > **Proposition** : Let $X$ be a continuous random variable with pdf $f(x)$ and cdf $F(x)$. Then for any number $a$, $$P(X>a)=1-F(a)$$ and for any two numbers a and b with $a<b$, $$P(a \leq X \leq b) = F(b)-F(a)$$
@@ -79,6 +89,8 @@ F(X) = \begin{cases}
 > **Proposition :** If X is a continous rv with pdf $f(x)$ and $h(X)$ is any function of X, then $$E[h(X)]=\mu_{h}(x)=\int_{-\infty}^{\infty}h(x)\cdot f(x)dx$$
 
 > **Proposition :** $$V(X)=E(X^2)-[E(X)]^2$$
+
+* Special case is $U[0,1]$ where $E(X)=\frac{1}{2}$ , $Var(X)\frac{1}{12}$
 
 # Examples
 
@@ -139,7 +151,7 @@ f(x) = \begin{cases}
       0 & x\leq 1
    \end{cases}
 \]
- a. **Determine the value of $k$ for which $f(x)$ is a legitimate pdf.**
+a. **Determine the value of $k$ for which $f(x)$ is a legitimate pdf.**
  
 What is the value of k>0?
 \begin{equation} \label{eq4}
@@ -152,7 +164,7 @@ What is the value of k>0?
 \end{equation}
 $\Rightarrow k = 3$
  
- b. **Obtain the cumulative distribuion function.** 
+b. **Obtain the cumulative distribuion function.** 
 
  $F(x)=0$ if $x\leq 1$ . So if $x>1$
  \begin{equation} \label{eq5}
@@ -171,7 +183,7 @@ F(x) = \begin{cases}
    \end{cases}
 \]
  
- c. **Use the cdf from (b) to determine the probability that headway exceeds 2 sec and also the probability that headway is between 2 and 3 sec.** 
+c. **Use the cdf from (b) to determine the probability that headway exceeds 2 sec and also the probability that headway is between 2 and 3 sec.** 
  
 \begin{equation} \label{eq6}
 \begin{split}
@@ -190,10 +202,15 @@ P[2\leq x\leq 3] & =F(3)-F(2)\\
 \end{split}
 \end{equation}
  
- d. **Obtain the mean value of headway and the standard deviation of headway** 
- 
- 1.5, 0.866
+d. **Obtain the mean value of headway and the standard deviation of headway** 
+
+![](img/d.png) 
  
  e. **What is the probability that headway is within 1 standard deviation of the mean value?** 
  
+ ![](img/e.png)
+ 
  = 0.924
+ 
+ 
+ 
