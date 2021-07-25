@@ -71,6 +71,21 @@ F(X) = \begin{cases}
 
 * ![](img/fig4.16.png)
 
+> A **continuity correction** is an adjustment that is made when a discrete distribution is approximated by a continuos distribution. 
+
+* usually adding or subtracting 0.5 before standardizing 
+
+> $X$ is said to have an **exponential distribution** with (scale) parameter $\lambda (\lambda >0)$ if the pdf of $X$ is
+\[ 
+f(x;\lambda ) = \begin{cases}
+      \lambda e^{-\lambda x} & x\geq 0 \\
+      0 &\text{otherwise}\
+   \end{cases}
+\]
+<center>
+![](img/fig4.26.png)
+<\center>
+
 # Theorems
 
 > **Proposition** : Let $X$ be a continuous random variable with pdf $f(x)$ and cdf $F(x)$. Then for any number $a$, $$P(X>a)=1-F(a)$$ and for any two numbers a and b with $a<b$, $$P(a \leq X \leq b) = F(b)-F(a)$$
@@ -91,6 +106,37 @@ F(X) = \begin{cases}
 > **Proposition :** $$V(X)=E(X^2)-[E(X)]^2$$
 
 * Special case is $U[0,1]$ where $E(X)=\frac{1}{2}$ , $Var(X)\frac{1}{12}$
+
+> **Proposition - Nonstandard Normal Distributions :** If $X$ has a normal distribution with mean $\mu$ and standard deviation $\sigma$, then $$Z=\frac{X-\mu}{\sigma}$$ has a standard normal distribution. Thus 
+\begin{equation} \label{eqa}
+\begin{split}
+P(a\leq X\leq b) & =P(\frac{a-\mu}{\sigma}\leq Z\leq \frac{b-\mu}{\sigma})\\
+& =\Phi (\frac{b-\mu}{\sigma})-\Phi (\frac{a-\mu}{\sigma})
+\end{split}
+\end{equation}
+$P(X\leq a) = \Phi (\frac{a-\mu}{\sigma}) \quad \quad P(X\geq b)=1-\Phi(\frac{a-\mu}{\sigma})$
+
+<center>
+* ![](img/fig4.21.png)
+</center>
+
+* If the population distribution of a variable is (approximately) normal, then : 
+
+1. Roughly 68% oft he values are within 1 SD of the mean.
+2. Roughly 95% oft he values are within 2 SD of the mean.
+3. Roughly 99.7% oft he values are within 3 SD of the mean.
+
+> **Proposition - Percentiles of an Arbitrary Normal Distribution :** $$(100p)\text{th percentile for normal} (\mu , \sigma ) = \mu +[(100p)\text{th for stadard normal}]\cdot \sigma$$
+
+> **Proposition :** 
+<center>
+![](img/prop4.3.png)
+</center>
+
+> **Proposition :** 
+<center>
+![](img/prop4.4.png)
+</center>
 
 # Examples
 
