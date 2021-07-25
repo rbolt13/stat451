@@ -10,3 +10,7 @@ output:
 ---
 
 # Content Coming Soon
+
+Remember: 
+
+$${x\choose{y}}=\frac{x!}{y!(x-y)!}$$
