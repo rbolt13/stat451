@@ -14,20 +14,12 @@ navbar:
       href: chapter2.html
     - text: "3 : DRV"
       href: chapter3.html
-    - text: "3 : HW"
-      href: homework3.html
     - text: "4 : CRV"
       href: chapter4.html
-    - text: "4 : HW"
-      href: homework4.html
     - text: "5 : JPD"
       href: chapter5.html
-    - text: "5 : HW"
-      href: homework5.html
     - text: "6 : PE"
       href: chapter6.html
-    - text: "6 : HW"
-      href: homework6.html
     - text: "Contact"
       href: contact.html
 ---
