@@ -135,6 +135,15 @@ cdf of X for standard gamma rv
 
 Note that an **incomplete gamma function** doesn't have a $\Gamma (\alpha)$ in the integral
 
+> Let $\nu$ be a positive integer. Then a random variable $X$ is said to have a **chi-squared distribution** with parameter $v$ if the pdf of $X$ is that gamma denstiy with $\alpha = \frac{v}{2}$ and $\beta =2$. The pdf of a chi-squared rv is thus
+\[ 
+f(x;\nu) = \begin{cases}
+      \frac{x^{(\nu /2)-1}e^{-x/2}}{2^{\nu /2}\Gamma (\frac{\nu}{2})} & x\geq 0 \\
+      0 &x<0\
+   \end{cases}
+\]
+The parametr $\nu$ is called the **number of degrees of freedom** (df) of $X$. The symbol $\chi ^2$ is oftern used in place of "chi-squared". 
+
 # Theorems
 
 > **Proposition** : Let $X$ be a continuous random variable with pdf $f(x)$ and cdf $F(x)$. Then for any number $a$, $$P(X>a)=1-F(a)$$ and for any two numbers a and b with $a<b$, $$P(a \leq X \leq b) = F(b)-F(a)$$
@@ -189,7 +198,7 @@ $P(X\leq a) = \Phi (\frac{a-\mu}{\sigma}) \quad \quad P(X\geq b)=1-\Phi(\frac{a-
 
 > **Proposition :** Suppose that the number of events occuring in any time interval of length t has a Poisson distribution with parameter $\alpha t$ (where $\alpha$ , the rate of the event process, is the expected number of events occuring in 1 unit of time) and that numbers of occurrences in nonoverlapping intervals are independednt of one another. Then the distribution of elapsed time between the occurrence of two successive events is exponential with parameter $\lambda =\alpha$
 
-> **Proposition :** Let $X$ have a gamma distribution with parameters $\alpha$ and $\beta$. Then for any $x>0$, the dcf of $X$ is given by $$P(X\geq x)=F(x;\alpha, \beta)=F(\frac{x}{\beta};\alpha)$$ where $F(\cdot ;\alpha)$ is the incomplete gamma function.
+> **Proposition :** Let $X$ have a gamma distribution with parameters $\alpha$ and $\beta$. Then for any $x>0$, the cdf of $X$ is given by $$P(X\geq x)=F(x;\alpha, \beta)=F(\frac{x}{\beta};\alpha)$$ where $F(\cdot ;\alpha)$ is the incomplete gamma function.
 
 # Examples
 

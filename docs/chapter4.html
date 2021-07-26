@@ -310,6 +310,14 @@ f(x;\alpha ,\beta) = \begin{cases}
 <li><span class="math inline">\(F(x;\alpha )=\int_{0}^{x}\frac{y^{\alpha-1}e^{-y}}{\Gamma (\alpha)}dy \quad x&gt;0\)</span></li>
 </ul>
 <p>Note that an <strong>incomplete gamma function</strong> doesn’t have a <span class="math inline">\(\Gamma (\alpha)\)</span> in the integral</p>
+<blockquote>
+<p>Let <span class="math inline">\(\nu\)</span> be a positive integer. Then a random variable <span class="math inline">\(X\)</span> is said to have a <strong>chi-squared distribution</strong> with parameter <span class="math inline">\(v\)</span> if the pdf of <span class="math inline">\(X\)</span> is that gamma denstiy with <span class="math inline">\(\alpha = \frac{v}{2}\)</span> and <span class="math inline">\(\beta =2\)</span>. The pdf of a chi-squared rv is thus <span class="math display">\[ 
+f(x;\nu) = \begin{cases}
+\frac{x^{(\nu /2)-1}e^{-x/2}}{2^{\nu /2}\Gamma (\frac{\nu}{2})} &amp; x\geq 0 \\
+0 &amp;x&lt;0\
+\end{cases}
+\]</span> The parametr <span class="math inline">\(\nu\)</span> is called the <strong>number of degrees of freedom</strong> (df) of <span class="math inline">\(X\)</span>. The symbol <span class="math inline">\(\chi ^2\)</span> is oftern used in place of “chi-squared”.</p>
+</blockquote>
 </div>
 <div id="theorems" class="section level1">
 <h1>Theorems</h1>
@@ -376,7 +384,7 @@ P(a\leq X\leq b) &amp; =P(\frac{a-\mu}{\sigma}\leq Z\leq \frac{b-\mu}{\sigma})\\
 <p><strong>Proposition :</strong> Suppose that the number of events occuring in any time interval of length t has a Poisson distribution with parameter <span class="math inline">\(\alpha t\)</span> (where <span class="math inline">\(\alpha\)</span> , the rate of the event process, is the expected number of events occuring in 1 unit of time) and that numbers of occurrences in nonoverlapping intervals are independednt of one another. Then the distribution of elapsed time between the occurrence of two successive events is exponential with parameter <span class="math inline">\(\lambda =\alpha\)</span></p>
 </blockquote>
 <blockquote>
-<p><strong>Proposition :</strong> Let <span class="math inline">\(X\)</span> have a gamma distribution with parameters <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. Then for any <span class="math inline">\(x&gt;0\)</span>, the dcf of <span class="math inline">\(X\)</span> is given by <span class="math display">\[P(X\geq x)=F(x;\alpha, \beta)=F(\frac{x}{\beta};\alpha)\]</span> where <span class="math inline">\(F(\cdot ;\alpha)\)</span> is the incomplete gamma function.</p>
+<p><strong>Proposition :</strong> Let <span class="math inline">\(X\)</span> have a gamma distribution with parameters <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. Then for any <span class="math inline">\(x&gt;0\)</span>, the cdf of <span class="math inline">\(X\)</span> is given by <span class="math display">\[P(X\geq x)=F(x;\alpha, \beta)=F(\frac{x}{\beta};\alpha)\]</span> where <span class="math inline">\(F(\cdot ;\alpha)\)</span> is the incomplete gamma function.</p>
 </blockquote>
 </div>
 <div id="examples" class="section level1">
