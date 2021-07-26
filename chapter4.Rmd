@@ -86,6 +86,55 @@ f(x;\lambda ) = \begin{cases}
 ![](img/fig4.26.png)
 <\center>
 
+
+* With cdf :
+\[ 
+F(x;\lambda ) = \begin{cases}
+      0 & x< 0 \\
+      1-e^{-\lambda x} &x\geq 0\
+   \end{cases}
+\]
+
+> For $\alpha >0$, the **gamma function** $\Gamma (\alpha)$ is defined by $$\Gamma (\alpha)=\int_{0}^{\infty} x^{\alpha -1}e^{-x}dx$$
+
+The most important properties of the gamma function are thus: 
+
+* For any $\alpha >1$, $\Gamma (\alpha) = (\alpha -1)\cdot \Gamma (\alpha -1)$ [via integration by parts]
+
+* For any positive interger $n$, $\Gamma (n)=(n-1)!$
+
+* $\Gamma (\frac{1}{2})=\sqrt{\pi}$
+
+pdf of a Gamma function: 
+\[ 
+f(x;\alpha ) = \begin{cases}
+      \frac{x^{\alpha-1}e^{-x}}{\Gamma (\alpha)} & x\geq 0 \\
+      0 &\text{otherwise}\
+   \end{cases}
+\]
+
+> A continuous random variable $X$ is said to have a **gamma distribution** if the pdf of X is 
+\[ 
+f(x;\alpha ,\beta) = \begin{cases}
+      \frac{x^{\alpha-1}e^{\frac{-x}{\beta}}}{\beta ^{\alpha }\Gamma (\alpha)} & x\geq 0 \\
+      0 &\text{otherwise}\
+   \end{cases}
+\]
+> where the parameters $\alpha$ and $\beta$ satisfy $\alpha > 0$, $\beta >0$. The **standard gamma distribution** has $\beta =1$, so the pdf of a standard gamma rv is given **Fig.4.27**. 
+<center>
+![](img/fig4.27.png)
+</center>
+
+* $E(X)=\mu =\alpha \beta$
+
+* $V(X)=\sigma ^2=\alpha \beta ^2$
+
+cdf of X for standard gamma rv 
+
+* $F(x;\alpha )=\int_{0}^{x}\frac{y^{\alpha-1}e^{-y}}{\Gamma (\alpha)}dy \quad x>0$
+
+Note that an **incomplete gamma function** doesn't have a $\Gamma (\alpha)$ in the integral
+
 # Theorems
 
 > **Proposition** : Let $X$ be a continuous random variable with pdf $f(x)$ and cdf $F(x)$. Then for any number $a$, $$P(X>a)=1-F(a)$$ and for any two numbers a and b with $a<b$, $$P(a \leq X \leq b) = F(b)-F(a)$$
@@ -137,6 +186,10 @@ $P(X\leq a) = \Phi (\frac{a-\mu}{\sigma}) \quad \quad P(X\geq b)=1-\Phi(\frac{a-
 <center>
 ![](img/prop4.4.png)
 </center>
+
+> **Proposition :** Suppose that the number of events occuring in any time interval of length t has a Poisson distribution with parameter $\alpha t$ (where $\alpha$ , the rate of the event process, is the expected number of events occuring in 1 unit of time) and that numbers of occurrences in nonoverlapping intervals are independednt of one another. Then the distribution of elapsed time between the occurrence of two successive events is exponential with parameter $\lambda =\alpha$
+
+> **Proposition :** Let $X$ have a gamma distribution with parameters $\alpha$ and $\beta$. Then for any $x>0$, the dcf of $X$ is given by $$P(X\geq x)=F(x;\alpha, \beta)=F(\frac{x}{\beta};\alpha)$$ where $F(\cdot ;\alpha)$ is the incomplete gamma function.
 
 # Examples
 
