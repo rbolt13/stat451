@@ -49,6 +49,8 @@ F(X) = \begin{cases}
 ![](img/fig4.10.png)
 </center>
 
+* For $\eta =\frac{1}{2}$ the median is $\eta (p)$
+
 > The **median** of a continous distribution, denoterd by $\widetilde \mu$ , is the 50th percentile, so $\widetilde \mu$ satisifies $0.5=F(\widetilde \mu)$ . That is, half the area under the density curve is to the left of $\widetilde \mu$ and half is to the right of $\widetilde \mu$ . 
 
 <center>
@@ -101,9 +103,13 @@ F(x;\lambda ) = \begin{cases}
       \frac{1}{\mu}e^{-x/\mu} & x\geq 0\
    \end{cases}\]
 
+* cdf given in class $F(x)=1-e^{-x/\mu}$ if $x>0$
+
 * $E(X)=\mu$
 
 * $Var(X)=\sigma (x)=\mu$
+
+* Exponential distributions are used to model lifetimes 
 
 
 > For $\alpha >0$, the **gamma function** $\Gamma (\alpha)$ is defined by $$\Gamma (\alpha)=\int_{0}^{\infty} x^{\alpha -1}e^{-x}dx$$
@@ -201,15 +207,7 @@ $P(X\leq a) = \Phi (\frac{a-\mu}{\sigma}) \quad \quad P(X\geq b)=1-\Phi(\frac{a-
 
 > **Proposition - Percentiles of an Arbitrary Normal Distribution :** $$(100p)\text{th percentile for normal} (\mu , \sigma ) = \mu +[(100p)\text{th for stadard normal}]\cdot \sigma$$
 
-> **Proposition :** 
-<center>
-![](img/prop4.3.png)
-</center>
-
-> **Proposition :** 
-<center>
-![](img/prop4.4.png)
-</center>
+> **Proposition :** Let $X$ be a binomial rv based on $n$ trials with sccess probability $p$. Then if the binomial probability histogram is not too skewed, $X$ has approximately a normal distribution with $\mu=n p$ and $\sigma =\sqrt{npq}$. In particular, for $x=\text{a possible value of X}$,$$P(X\leq x)=B(x,n , p)\approx {\text{are under the normal curve}\choose{\text{to the left of}\quad x+0.5}}=\Phi(\frac{z+0.5-np}{\sqrt{npq}})$$ In practice, the approximation is adequate provided that both $np\geq10$ and $nq\geq10$ (i.e. the expected number of successes and the expected number of failures are both at least 10), since there is then enough symmetry in the underlying binomial distribution. 
 
 > **Proposition :** Suppose that the number of events occuring in any time interval of length t has a Poisson distribution with parameter $\alpha t$ (where $\alpha$ , the rate of the event process, is the expected number of events occuring in 1 unit of time) and that numbers of occurrences in nonoverlapping intervals are independednt of one another. Then the distribution of elapsed time between the occurrence of two successive events is exponential with parameter $\lambda =\alpha$
 
@@ -267,14 +265,14 @@ P(3.5\leq X\leq 4.5) & =\int_{3.5}^{4.5}f(x)dx\\
 $P(X<4.5)=0.278125$
  
 ### Exercise 13 (page 155)
-**Example 4.5** introducted the concept of time headway in traffic flow and proposed a particular distribution for X = the headway between two randomly selected consecutice cars (sec). Suppose that in a different traffic enviroment, the distribution of time headway has the form
+**Example 4.5** introduced the concept of time headway in traffic flow and proposed a particular distribution for X = the headway between two randomly selected consecutive cars (sec). Suppose that in a different traffic environment, the distribution of time headway has the form
 \[ 
 f(x) = \begin{cases}
       \frac{k}{x^4} & x>1\\
       0 & x\leq 1
    \end{cases}
 \]
-a. **Determine the value of $k$ for which $f(x)$ is a legitimate pdf.**
+(a.) **Determine the value of $k$ for which $f(x)$ is a legitimate pdf.**
  
 What is the value of k>0?
 \begin{equation} \label{eq4}
@@ -287,7 +285,7 @@ What is the value of k>0?
 \end{equation}
 $\Rightarrow k = 3$
  
-b. **Obtain the cumulative distribuion function.** 
+(b.) **Obtain the cumulative distribuion function.** 
 
  $F(x)=0$ if $x\leq 1$ . So if $x>1$
  \begin{equation} \label{eq5}
@@ -306,7 +304,7 @@ F(x) = \begin{cases}
    \end{cases}
 \]
  
-c. **Use the cdf from (b) to determine the probability that headway exceeds 2 sec and also the probability that headway is between 2 and 3 sec.** 
+(c.) **Use the cdf from (b) to determine the probability that headway exceeds 2 sec and also the probability that headway is between 2 and 3 sec.** 
  
 \begin{equation} \label{eq6}
 \begin{split}
@@ -325,15 +323,43 @@ P[2\leq x\leq 3] & =F(3)-F(2)\\
 \end{split}
 \end{equation}
  
-d. **Obtain the mean value of headway and the standard deviation of headway** 
+(d.) **Obtain the mean value of headway and the standard deviation of headway** 
 
 ![](img/d.png) 
  
- e. **What is the probability that headway is within 1 standard deviation of the mean value?** 
+(e.) **What is the probability that headway is within 1 standard deviation of the mean value?** 
  
- ![](img/e.png)
+\begin{equation} \label{eq9}
+\begin{split}
+P[\mu -\sigma \leq x \leq \mu +\sigma] & =P[1.5-0.866\leq x \leq 1.5+0.866]\\
+& =P[0.34\leq x \leq 2.366]\\
+& = F(2.366)-F(0.634)\\
+& = 924
+\end{split}
+\end{equation}
  
- = 0.924
- 
- 
+### In Class Example (July 22nd 2021)
+For exponential distribution with mean $\mu$, to find the median, solve the equations for $F(X)=\frac{1}{2}$
+
+
+$$1-e^{-x/\mu}  =\frac{1}{2}$$
+$$e^{-x/\mu}  =\frac{1}{2}$$
+$$\frac{-x}{\mu}=ln(\frac{1}{2})$$
+$$\Rightarrow M=-\mu ln(\frac{1}{2})=\mu ln(2)$$ 
+
+* skewed to the right, drops exponentially fast to zero 
+
+Suppose x is the lifetime, and s is when the item stops working (when x>s). What is the conditional probability that it will live longer than the expected value. $P[x>s+t|x>s]$
+
+\begin{equation} \label{eq8}
+\begin{split}
+P[x>s+t|x>s] & =\frac{P[x>s+t]}{P[x>s]}\\
+& = \frac{1-F(s+t)}{1-F(s)}\\
+& = \frac{e^{-(s+t)}}{\mu}\\
+& = e^{-t/\mu}
+\end{split}
+\end{equation}
+
+* independent of s! called the memory-less property (forgets how long its been working)
+
  
