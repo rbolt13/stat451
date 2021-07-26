@@ -95,6 +95,17 @@ F(x;\lambda ) = \begin{cases}
    \end{cases}
 \]
 
+* pdf given in class : 
+\[ f(x) = \begin{cases}
+      0 & x\leq 0 \\
+      \frac{1}{\mu}e^{-x/\mu} & x\geq 0\
+   \end{cases}\]
+
+* $E(X)=\mu$
+
+* $Var(X)=\sigma (x)=\mu$
+
+
 > For $\alpha >0$, the **gamma function** $\Gamma (\alpha)$ is defined by $$\Gamma (\alpha)=\int_{0}^{\infty} x^{\alpha -1}e^{-x}dx$$
 
 The most important properties of the gamma function are thus: 
@@ -112,6 +123,10 @@ f(x;\alpha ) = \begin{cases}
       0 &\text{otherwise}\
    \end{cases}
 \]
+
+* $\Gamma (\alpha)=\int_{0}^{\infty} x^{\alpha -1}e^{-x}dx=(\alpha -1)\int_{0}^{\infty} x^{\alpha -2}e^{-x}dx$
+
+* If $\alpha$ is an (enliga?) then $$\sqrt{(\alpha)}=(\alpha -1)!$$ $$\sqrt{(\frac{1}{2})}=\sqrt{(\pi)}$$
 
 > A continuous random variable $X$ is said to have a **gamma distribution** if the pdf of X is 
 \[ 
