@@ -1,0 +1,16 @@
+---
+title: "Chapter 6 : Point Estimation"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'chapter6.html'))})
+output: 
+  html_document: rmdformats::readthedown
+---
+
+# Definitions
+
+# Theorems 
+
+# Examples
