@@ -69,7 +69,7 @@ F(X) = \begin{cases}
 
 * most popular distribution, and most distributions are related to this model
 
-* $\mu$ : mean is the center of the curve, and $\sigma$ is the vairablity 
+* $\mu$ : mean is the center (location) of the curve, and $\sigma$ is the variability 
 
 > The normal distribution with parameter values $\mu = 0$ and $\sigma =1$ is called the **standard normal distribution**. A rv having a standard normal distribution is called a **standard normal random variable** and will be denoted by $Z$. the pdf of $Z$ is $$f(x;0,1)=\frac{1}{\sqrt{2\pi }}e^{\frac{-z^2}{2}}\quad{-\infty <x<\infty}$$
 > The graph of $f(z;0,1)$ is called the *standard normal* (or $\mathscr{z}$) curve. Its inflections points are at 1 and -1. The cdf of Z is $P(Z\leq z)=\int_{-\infty}^{z}f(y;0,1)dy$ , which we will denote by $\Phi (\mathscr{z})$ .
@@ -83,7 +83,17 @@ F(X) = \begin{cases}
 
 * E[Z]=0, and Var[Z]=1
 
-* For **any** distribution $z=\frac{x-\mu}{\sigma}\approx N(0,1)$
+* $E[x]=\mu$, and $Var(x)=\sigma ^2$
+
+* For **any** normal distribution $z=\frac{x-\mu}{\sigma}\approx N(0,1)$
+
+* \begin{equation} \label{psn}
+\begin{split} 
+P[a\leq x\leq b] & = P[(\frac{a-\mu}{\sigma})\leq (\frac{x-\mu}{\sigma})\leq (\frac{b-\mu}{\sigma})]\\
+& = P[(\frac{a-\mu}{\sigma})\leq Z\leq (\frac{b-\mu}{\sigma})] \quad \text{where z ~ (0,1)}\\
+& =\Phi (\frac{b-\mu}{\sigma}) - \Phi (\frac{a-\mu}{\sigma})
+\end{split}
+\end{equation}
 
 * ![](img/fig4.16.png)
 
@@ -446,3 +456,91 @@ P[x>s+t|x>s] & =\frac{P[x>s+t]}{P[x>s]}\\
 \end{equation}
 
 * independent of s! called the memory-less property (forgets how long its been working)
+
+### In Class Example (7-27-21) 
+**Find area under the curve**
+
+Using TI-83 : normalcdf(-1.960,1.960,0,1)
+
+$P[\mu - 1.960\leq x\leq \mu + 1.960 ]=0.95$
+
+Using TI-83 : normalcdf(-2.580,12.580,0,1)
+
+$P[\mu - 2.580\leq x\leq \mu + 2.580 ]=0.99$
+
+Using TI-83 : normalcdf(-1,1,0,1)
+
+$P[\mu - \sigma \leq x\leq \mu +\sigma ]=0.68$
+
+Using TI-83 : normalcdf(-1.6450,1.6450,0,1)
+
+$P[\mu - 1.6450\leq x\leq \mu + 1.6450 ]=0.90$
+
+
+### Exercise 13 (page 155)
+**In a road-paving process, asphalt mix is delivered to the hopper of the pave by trucks that haul the material from the batching plant. The article ... proposed a normal distribution with mean value 8.46 min and standard deviation 0.913 min for rv with X = truck haul time.** 
+
+(a.) **What is the probability that haul time will be at least 10 min? Will exceed 10 min?**
+
+Using TI-83 : normalcdf(10,99999,8.46,0.913)
+
+$P[x\geq 10]=0.0458$ 
+
+(b.) **What is the probability that haul time will exceed 15 min?* 
+
+Using TI-83 : normalcdf(15,99999,8.46,0.913)
+
+$p[x\geq 15]\approx 0$
+
+(c.) **What is the probability that haul time will be between 8 and 10 minutes?**
+
+Using TI-83 : normalcdf(10,99999,8.46,0.913)
+
+$P[8\leq x\leq 10]=0.647$
+
+(d.) **What value $c$ is such that 98% of all haul times are in the interval from 8.46 -c to 8.46+c?**
+
+<center>
+![](img/graphd.png)
+</center>
+
+\begin{equation}\label{bastard}
+\begin{split}
+P[8.46-c\leq x\leq8.46+c] & = 0.98\\ 
+& = P[\frac{8.46-c-\mu}{0.913}\leq \frac{x-\mu }{\sigma}\leq \frac{8.46+c-\mu}{0.913}] = 0.98\\
+& = P[-\frac{c}{0.913}\leq z\leq \frac{c}{0.913}] = 0.98
+\end{split}
+\end{equation}
+
+Using TI-83 : invNorm(.01)=-2.326 ir invNorm(0.99)=2.326
+
+$\frac{c}{0.913}=2.33$
+$c=(2.33)(0.913)$
+$c=2.127$
+
+(e.) **If four haul times are independently selected, what is the probability that at least one of them exceeds 10 min?** 
+
+Let $x_1$,$x_2$, $x_3$, $x_4$, be the four independt haul times. 
+
+\begin{equation}\label{bingbong}
+\begin{split}
+P[\text{ at least one of the }x_i >10] & = 1-P[\text{ none of them are }>10]\\
+& = 1-P[x_1\leq 10, x_2\leq 10, x_3\leq 10, x_4\leq 10,]\\
+& = 1-P[x_1\leq 10]P[x_2\leq 10]P[x_3\leq 10]P[x_4\leq 10]\\
+& = 1-(1-0.0458)^4\\
+& = 0.17
+\end{split}
+\end{equation}
+
+(f.) **what is the probability that at least 2 haul times exceed 10 minutes?**
+
+Use binomial distribution and say success is 0.0458 then, 
+
+Let \[y_i= \begin{cases}
+   1 & \text{if }x_i>10\\
+   0 & \text{otherwise}\\
+   \end{cases}\]
+
+$U=Y_1+Y_2+Y_3+Y_4 \approx B(n=4, p=P[x>10]=0.458)$
+
+$P[U\leq 2]=1-P[U\leq 1]=1-F(1)=0.988$
