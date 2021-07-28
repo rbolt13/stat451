@@ -432,5 +432,3 @@ P[x>s+t|x>s] & =\frac{P[x>s+t]}{P[x>s]}\\
 \end{equation}
 
 * independent of s! called the memory-less property (forgets how long its been working)
-
- 

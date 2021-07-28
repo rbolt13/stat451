@@ -1284,7 +1284,72 @@ y
 </div>
 <div id="homework-5" class="section level3">
 <h3>Homework 5</h3>
-<p>coming soon . . .</p>
+<ol style="list-style-type: decimal">
+<li><strong>3.52 : Suppose that 30% of all students who have to buy a text for a partibular course want a new copy (the successes!), wheras the other 70% want a used copy. Consider randomly selecting 25 purchasers.</strong></li>
+</ol>
+<p>(a.) <strong>What are the mean value and standard deviation of the number who want a new copy of the book?</strong></p>
+<p>(b.) <strong>What is the probability that the number who want new copies is more than two standard deviations away from the mean value?</strong></p>
+<p>(c.) <strong>The bookstore has 15 new copies and 15 used copies in stock. If 25 people come in one by one to purchase this text, what is the probability that 25 will get the type of book they want from current stock? [Hint: Let X = the number who want a new copy. For what values of X will all 25 get what they want?]</strong></p>
+<p>(d.) <strong>Suppose that new copies cost 100 dollars and used copies cost 70. Assume the bookstore currently has 50 new copies and 50 used copies. What is the expected value of total revenue from the sale of the next 25 copies purchsed? be sure to indicate what rule of expected value you are using. [Hint: Let h(X) = the revenue when X of the 25 purchasers want new copies. Express this as a linear function]</strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>3.60 : A toll bridge charges 1.00 dollar for passenger cars and 2.50 for the other vehicles. Suppose that during daytime hours, 60% of all vehicles are passenger cars. If 25 vehicles cross the bridge during a particular daytime period, what is the resulting expected toll revenue? [Hint: Let X = the number of passenger cars; then the toll revenue h(X) is a linear function of X.]</strong></li>
+</ol>
+<p>Let X = the number of passenger cars.</p>
+<p>Revenue = <span class="math inline">\(1.00(X)+2.50(25-X)\)</span></p>
+<p>E(X)=np=25(.6)=15</p>
+<p>Expected Revenue = 1.00(15)+2.50(25-15)=15.00+25.00=40.00</p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>3.70 : An instructor who taught two sections of engineering statistics last term, the first with 20 students and the second with 30, decided to assign a term project. After all projects had been turned in, the instructor randomly ordered them before grading. Consider the first 15 graded projects.</strong></li>
+</ol>
+<p><span class="math display">\[N=20+30=50 \quad n=15 \quad M =30\]</span></p>
+<p>(a.) <strong>What is the probability that exactly 10 of these are from the second section?</strong></p>
+<p>Using Calculator for hypergeometric distribution</p>
+<p><span class="math inline">\(P(X=10)=h(10;15,30,50)=0.206953879=20.7\)</span> %</p>
+<p>(b.) <strong>What is the probability that at least 10 of these are from the second section?</strong></p>
+<p>Using Calculator for hypergeometric distribution</p>
+<p><span class="math inline">\(P(X\geq 10)=0.379818805=37.98\)</span> %</p>
+<p>(c.) <strong>What is the probability that at least 10 of these are from the same section?</strong></p>
+<p>Using Calculator for hypergeometric distribution</p>
+<p><span class="math inline">\(P_{M=20}(X\leq 10)=h(10;15,20,50)=0.013985119=1.4\)</span> %</p>
+<p><span class="math inline">\(P_{(M=20 and M=30)}(X\leq 10) =3 7.98 +1.4 = 39.38\)</span> %</p>
+<p>(d.) <strong>What are the mean value and standard deviation of the number among these 15 that are from the second section?</strong></p>
+<p><span class="math inline">\(E(X)=n\cdot \frac{M}{N}=(15)(\frac{30}{50})=9\)</span></p>
+<p><span class="math inline">\(V(X)=\sqrt{(\frac{N-n}{N-1})\cdot n\cdot \frac{M}{N}\cdot (1-MN)}=\sqrt{(\frac{35}{49})(15)(\frac{3}{5})(\frac{2}{5})}=2.57=1.60\)</span></p>
+<p>(e.) <strong>What are the mean value and standard deviation of the number of projects not among these first 15 that are from the second section?</strong></p>
+<p><span class="math inline">\(E(X)=n\cdot \frac{M}{N}=(15)(\frac{20}{50})=6\)</span></p>
+<p><span class="math inline">\(V(X)=\sqrt{(\frac{N-n}{N-1})\cdot n\cdot \frac{M}{N}\cdot (1-MN)}=\sqrt{(\frac{35}{49})(15)(\frac{2}{5})(\frac{3}{5})}=2.57=1.60\)</span></p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>3.74 : A second-stage smog alert has been called in a certain area of Los Angeles County in which there are 50 industrial firms. An inspector will visit 10 randomly selected firms to check for violations of regulations.</strong> <span class="math display">\[N=50 \quad n=10\]</span></li>
+</ol>
+<p>(a.) <strong>If 15 of the firms are actually violating at least one regulation, what is the pmf of the number of firms visited by the inspector that are in violation of at least one regulation?</strong></p>
+<p>Using a hypergeometric distribution for a small population of 50 :</p>
+<p><span class="math inline">\(p(x)=P(X=x)=h(x;10,15,50)=\frac{{15\choose x}{35\choose{10-x}}}{{50}\choose{10}} for x=1,2,3,...,10\)</span></p>
+<p>(b.) <strong>If there are 500 firms in the area, of which 150 are in violation, approximate the pmf of part(a) by a simpler pmf.</strong></p>
+<p>(c.) <strong>For X = the number among the 10 visited that are in violation, compute E(X) and V(X) both for the exact pmf and the approximating pmf in part (b).</strong></p>
+<ol start="5" style="list-style-type: decimal">
+<li><p><strong>3.76 : A family decides to have children until it has three children of the same gender. Assuming P(B)=P(G)=0.5 what is the pmf of X = the number of children in the family?</strong></p></li>
+<li><p><strong>3.96 : The negative binomial rv X was defined as the number of F’s preceding the rth S. Let Y = the number of trials necessary to obtain the rth S. In the same manner in which the pmf of X was derived, derive the pmf of Y.</strong></p></li>
+<li><p><strong>3.97 : Of all customers purchasing automatic garage-door openers, 75% purchase a chain-driven model. Let X = the number among the next 15 purchasers who select the chain-driven model.</strong></p></li>
+</ol>
+<p>(a.) <strong>What is the pmf of X?</strong></p>
+<p>(b.) <strong>Compute <span class="math inline">\(P(X&gt;10)\)</span>.</strong></p>
+<p>(c.) <strong>Compute <span class="math inline">\(P(6\leq X\leq 10)\)</span>.</strong></p>
+<p>(d.) <strong>Compute <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma ^2\)</span>.</strong></p>
+<p>(e.) <strong>If the store currently has in stock 10 chain-driven models and 8 shaft-driven models, what is the probability that the requests of these 15 customers can all be met from existing stock?</strong></p>
+<ol start="8" style="list-style-type: decimal">
+<li><strong>3.100 : A manufacturer of integrated circuit chips wishes to control the quality of its product by rejecting any batch in which the proportion of defective chips is too high. To this end, out of each batch (10,000 chips), 25 will be selected and tested. If at least 5 of these 25 are defective, the entire batch will be rejected.</strong></li>
+</ol>
+<p>(a.) <strong>What is the probability that a batch will be rejected if 5% of the chips in the batch are in fact defective?</strong></p>
+<p>(b.) <strong>Answer the question posed in (a) if the percentage of detective chips in the batch is 10%.</strong></p>
+<p>(c.) <strong>Answer the question posed in (a) if the percentage of defective chips in the batch is 20%.</strong></p>
+<p>(d.) <strong>What happens to the probabilities in (a), (b), (c) if the critical rejection number is increased from 5 to 6?</strong></p>
+<ol start="9" style="list-style-type: decimal">
+<li><strong>3.110 : Grasshoppers are distributed at random in a large field according to a Poisson process with parameter <span class="math inline">\(\alpha\)</span> =2 per square yard. How large should the radius R of a circular sampling region be so that the probability of finding at least one in the region equals 0.99?</strong></li>
+</ol>
+<p>Bonus : <strong>3.52 : Suppose E(X) = 5 and E(X(X-1)] =27.5. What is:</strong></p>
+<p>(a.) <strong>E(<span class="math inline">\(X^2\)</span>)? [Hint: First verify that $E[X(X(-1)]=E(X^2)-E(X)]$?</strong></p>
+<p>(b.) <strong>V(X)?</strong></p>
+<p>(c.) <strong>The general relationship among the quantites E(X), E(X(X-1)), and V(X)?</strong></p>
 </div>
 </div>
 </div>
