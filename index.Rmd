@@ -16,9 +16,7 @@ library(kableExtra)
 # About
 This site was made by Randi Bolt, an undergrad mathematics and statistics student at Portland State University for Statistics - 451 : Applied Statistics for Engineers and Scientists during the Summer of 2021. Most of the definitions,  theorems, example problems and homework problems are from the book *Probability and Statistics for Engineering and the Sciences, Enhanced Edition, 9th ed.*, with some class examples and notes from Subhash Kochar. Other than that the rest of the site and work (both in homework and examples) is my own. 
 
-Each chapter is shown in the nav. bar, along with with homework (HW) problems that cover the material in that chapter. 
-
-Each chapter is divided into three sections : Definitions, Theorems, and Examples. 
+Each chapter is shown in the navigation bar above, and divided into four sections : Definitions, Theorems, Examples, and Homework. 
 
 For questions, comments, or curiosity check out the contact page for my email, and other projects I have worked on during my undergraduate degree. 
 
@@ -47,7 +45,7 @@ Current <- c("This page tells a little about the site, and the updates on each p
              "No content on this page.",
              "There are a few definitions and axioms availble from chapter 2.",
              "This page has Definitions, Theorems, and Examples from chapter 3, as well as Homework 4 which covers chapter 3 material.",
-             "Definitions and Theorems from 4.1-4.4 and class examples and notes from 7/22",
+             "All of chapter 4 definitions, theorems, and class examples (and notes) from 7/22",
              "No content on this page",
              "No content on this page",
              "Here is where you can find my email address and links to other projects I've worked on. ")
@@ -55,7 +53,7 @@ Tasks <- c("This page is up to date.",
            "Will fill this page out at the end of the term.",
            "Will fill this page out at the end of the term.",
            "A few examples aren't finished, and a couple images could be replaced with text. Also missing day 7 examples, and homework 5.",
-           "4.5-4.6 theorems and definitions",
+           "class examples",
            "Definitions, Theorems, Examples",
            "Definitions, Theorems, Examples",
            "This page is up to date.")
