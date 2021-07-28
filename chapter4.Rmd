@@ -79,7 +79,9 @@ F(X) = \begin{cases}
 
 * When z goes to infinity the e^ goes to 0 very fast 
 
-* z table goes from -3.4 to 3.4 
+* z table goes from z-values of -3.4 to 3.4 
+
+* E[Z]=0, and Var[Z]=1
 
 * ![](img/fig4.16.png)
 
