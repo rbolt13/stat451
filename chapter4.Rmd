@@ -269,6 +269,19 @@ f(x;\alpha ,\beta ,A, B) = \begin{cases}
 ![](img/fig4.32.png)
 <\center>
 
+* \[f(x) = \begin{cases}
+         \frac{x^{\alpha -1}(1-x)^{\beta -1}}{B(\alpha \beta)} & x\in (0,1)\\
+         0 & \text{otherwise}\
+         \end{cases}\]
+         
+* beta distribution tells you about your thoughts and ideas
+
+* $E[x]=\frac{\alpha}{\alpha +\beta}$
+
+* If $\alph =\beta$ then $E[x]=\frac{1}{2}$
+
+* $V[x]=\frac{\alpha \beta}{(\alpha +\beta )^2(\alpha +\beta +1)}$
+
 > A **probability plot** is used for assessing whether or not a data set follows a given distribution (such as normal or Weibull). 
 
 > Order the $n$ sample observations from the smallest to largest. Then the $ith$ smallest observation in the list is taken to be the $[100(i-0.5)/n]$ th **sample percentile** 
@@ -652,3 +665,14 @@ $P(X\geq 4)=\int_{-\infty}^{4}f(x)dx=\int_{0}^{4}e^{-x}dx=1-e^-4$
 (d.) $P(2\leq X\leq 5)$
 
 $P(2\leq X\leq 5)=\int_{2}^{5}e^{-x}dx=e^{-2}-e^{-5}$
+
+### Exercise 100 (page 194)
+**Let X denote the time to failure (in years) of a certain hydraulic component. Suppose the pdf of X is $f(x)=\frac{32}{(x+4)^3}$ for $x<0$.**
+
+(a.) **Verify that $f(x)$ is a legitimate pdf.**
+
+(b.) **Determine the cdf**
+
+
+
+
