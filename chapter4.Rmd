@@ -65,11 +65,21 @@ F(X) = \begin{cases}
 
 > A continuous rv X is said to have a **normal distribution** with parameters $\mu$ and $\sigma$ (or $\mu$ and $\sigma ^2$), where$-\infty < \mu < \infty$ and $0<\infty$, if the pdf of X is $$f(x;\mu ,\sigma )=\frac{1}{\sqrt{2\pi }\sigma }e^{\frac{-(x-\mu)^2}{{(2\sigma ^2)}}}\quad{-\infty <x<\infty}$$ 
 
+* Gaussian Distribution , bell shape curve
+
+* most popular distribution, and most distributions are related to this model
+
+* $\mu$ : mean is the center of the curve, and $\sigma$ is the vairablity 
+
 > The normal distribution with parameter values $\mu = 0$ and $\sigma =1$ is called the **standard normal distribution**. A rv having a standard normal distribution is called a **standard normal random variable** and will be denoted by $Z$. the pdf of $Z$ is $$f(x;0,1)=\frac{1}{\sqrt{2\pi }}e^{\frac{-z^2}{2}}\quad{-\infty <x<\infty}$$
 > The graph of $f(z;0,1)$ is called the *standard normal* (or $\mathscr{z}$) curve. Its inflections points are at 1 and -1. The cdf of Z is $P(Z\leq z)=\int_{-\infty}^{z}f(y;0,1)dy$ , which we will denote by $\Phi (\mathscr{z})$ .
 <center>
 ![](img/fig4.14.png)
 </center>
+
+* When z goes to infinity the e^ goes to 0 very fast 
+
+* z table goes from -3.4 to 3.4 
 
 * ![](img/fig4.16.png)
 
