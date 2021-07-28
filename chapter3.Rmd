@@ -719,8 +719,11 @@ $p(x)=P(X=x)=h(x;10,15,50)=\frac{{15\choose x}{35\choose{10-x}}}{{50}\choose{10}
 
 Bonus : **3.52 : Suppose E(X) = 5 and E(X(X-1)] =27.5. What is:** 
 
-(a.) **E($X^2$)? [Hint: First verify that $E[X(X(-1)]=E(X^2)-E(X)]$?**
+(a.) **E($X^2$)? [Hint: First verify that E[X(X(-1)]=E($X^2$)-E(X)]?**
 
 (b.) **V(X)?**
 
 (c.) **The general relationship among the quantites E(X), E(X(X-1)), and V(X)?** 
+
+$E(X(X-1))=E(X^2)-E(X)$
+$V(X)=E(X^2)-[E(X)]^2$
