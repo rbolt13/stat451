@@ -686,8 +686,15 @@ $p(x)=P(X=x)=h(x;10,15,50)=\frac{{15\choose x}{35\choose{10-x}}}{{50}\choose{10}
 
 (b.) **If there are 500 firms in the area, of which 150 are in violation, approximate the pmf of part(a) by a simpler pmf.**
 
+Using a binomial distribution for large populations and $p=\frac{150}{500}=0.3$:
+
+$p(x)=P(X=x)=b(x;10,0.3)={10\choose 0.3}0.3^x(1-0.3)^{10-x} \quad \text{for } x=1,2,3,...,10$
 
 (c.) **For X = the number among the 10 visited that are in violation, compute E(X) and V(X) both for the exact pmf and the approximating pmf in part (b).**  
+
+$E(X)=np=10\cdot 0.3=3$
+
+$V(X)=np(1-p)=10(0.3)(0.7)=2.1$
 
 5. **3.76 : A family decides to have children until it has three children of the same gender. Assuming P(B)=P(G)=0.5 what is the pmf of X = the number of children in the family?** 
 
@@ -709,19 +716,55 @@ $p(x)=P(X=x)=h(x;10,15,50)=\frac{{15\choose x}{35\choose{10-x}}}{{50}\choose{10}
 
 (a.) **What is the probability that a batch will be rejected if 5% of the chips in the batch are in fact defective?** 
 
+Using a binomial distribution for large populations and  TI-89 : binomialcdf(25, 0.05, 4)
+
+$P(X\geq 5)=1-P(x\geq 4)=1-0.9928=0.0072=0.72$ %
+
 (b.) **Answer the question posed in (a) if the percentage of detective chips in the batch is 10%.** 
 
+Using TI-89 : binomialcdf(25, 0.10, 4)
+
+$P(X\geq 5)=1-P(x\geq 4)=1-0.90201=0.09799=9.8$ %
+
 (c.) **Answer the question posed in (a) if the percentage of defective chips in the batch is 20%.** 
+Using TI-89 : binomialcdf(25, 0.2, 4)
+
+$P(X\geq 5)=1-P(x\geq 4)=1-0.42067=0.5793=57.93$ %
 
 (d.) **What happens to the probabilities in (a), (b), (c) if the critical rejection number is increased from 5 to 6?** 
 
+Using a TI-89 for problem (a) : binomialcdf(25,0.05,5)
+
+$P(X\geq 6)=1-P(x\geq 5)=1-0.9987=0.00121=0.12$ %
+
+Using a TI-89 for problem (b) : binomialcdf(25,0.10,5)
+
+$P(X\geq 6)=1-P(x\geq 5)=1-0.9666=0.0333=3.33$ %
+
+Using a TI-89 for problem (c) : binomialcdf(25,0.20,5)
+
+$P(X\geq 6)=1-P(x\geq 5)=1-0.61669=0.38331=35.33$ %
+
 9. **3.110 : Grasshoppers are distributed at random in a large field according to a Poisson process with parameter $\alpha$ =2 per square yard. How large should the radius R of a circular sampling region be so that the probability of finding at least one in the region equals 0.99?**  
+
+$P(X=0)=\frac{e^{-2k}(2)^0}{0!}=e^{-2k}=1-0.99=0.01$
+
+$\Rightarrow k=\frac{ln(0.01)}{-2} =2.3026 \text{ yds}^2$
+
+$A_{\text{circle}}=\pi r^2=k$
+
+$r=\sqrt{\frac{k}{\pi}}=\sqrt{\frac{2.3026}{\pi}}=0.8561\text{ yards}$
 
 Bonus : **3.52 : Suppose E(X) = 5 and E(X(X-1)] =27.5. What is:** 
 
 (a.) **E($X^2$)? [Hint: First verify that E[X(X(-1)]=E($X^2$)-E(X)]?**
 
+$27.5=E(X(X-1))=E(X^2-X)=E(X^2)-E(X)=E(X^2)-5$
+$\Rightarrow E(X^2)=27.5+5=32.5$
+
 (b.) **V(X)?**
+
+$V(X)=E(X^2)-[E(X)]^2=32.5-5^2=32.5-25=7.5$
 
 (c.) **The general relationship among the quantites E(X), E(X(X-1)), and V(X)?** 
 

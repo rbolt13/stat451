@@ -1325,7 +1325,11 @@ y
 <p>Using a hypergeometric distribution for a small population of 50 :</p>
 <p><span class="math inline">\(p(x)=P(X=x)=h(x;10,15,50)=\frac{{15\choose x}{35\choose{10-x}}}{{50}\choose{10}} for x=1,2,3,...,10\)</span></p>
 <p>(b.) <strong>If there are 500 firms in the area, of which 150 are in violation, approximate the pmf of part(a) by a simpler pmf.</strong></p>
+<p>Using a binomial distribution for large populations and <span class="math inline">\(p=\frac{150}{500}=0.3\)</span>:</p>
+<p><span class="math inline">\(p(x)=P(X=x)=b(x;10,0.3)={10\choose 0.3}0.3^x(1-0.3)^{10-x} \quad \text{for } x=1,2,3,...,10\)</span></p>
 <p>(c.) <strong>For X = the number among the 10 visited that are in violation, compute E(X) and V(X) both for the exact pmf and the approximating pmf in part (b).</strong></p>
+<p><span class="math inline">\(E(X)=np=10\cdot 0.3=3\)</span></p>
+<p><span class="math inline">\(V(X)=np(1-p)=10(0.3)(0.7)=2.1\)</span></p>
 <ol start="5" style="list-style-type: decimal">
 <li><p><strong>3.76 : A family decides to have children until it has three children of the same gender. Assuming P(B)=P(G)=0.5 what is the pmf of X = the number of children in the family?</strong></p></li>
 <li><p><strong>3.96 : The negative binomial rv X was defined as the number of F’s preceding the rth S. Let Y = the number of trials necessary to obtain the rth S. In the same manner in which the pmf of X was derived, derive the pmf of Y.</strong></p></li>
@@ -1340,15 +1344,32 @@ y
 <li><strong>3.100 : A manufacturer of integrated circuit chips wishes to control the quality of its product by rejecting any batch in which the proportion of defective chips is too high. To this end, out of each batch (10,000 chips), 25 will be selected and tested. If at least 5 of these 25 are defective, the entire batch will be rejected.</strong></li>
 </ol>
 <p>(a.) <strong>What is the probability that a batch will be rejected if 5% of the chips in the batch are in fact defective?</strong></p>
+<p>Using a binomial distribution for large populations and TI-89 : binomialcdf(25, 0.05, 4)</p>
+<p><span class="math inline">\(P(X\geq 5)=1-P(x\geq 4)=1-0.9928=0.0072=0.72\)</span> %</p>
 <p>(b.) <strong>Answer the question posed in (a) if the percentage of detective chips in the batch is 10%.</strong></p>
-<p>(c.) <strong>Answer the question posed in (a) if the percentage of defective chips in the batch is 20%.</strong></p>
+<p>Using TI-89 : binomialcdf(25, 0.10, 4)</p>
+<p><span class="math inline">\(P(X\geq 5)=1-P(x\geq 4)=1-0.90201=0.09799=9.8\)</span> %</p>
+<p>(c.) <strong>Answer the question posed in (a) if the percentage of defective chips in the batch is 20%.</strong> Using TI-89 : binomialcdf(25, 0.2, 4)</p>
+<p><span class="math inline">\(P(X\geq 5)=1-P(x\geq 4)=1-0.42067=0.5793=57.93\)</span> %</p>
 <p>(d.) <strong>What happens to the probabilities in (a), (b), (c) if the critical rejection number is increased from 5 to 6?</strong></p>
+<p>Using a TI-89 for problem (a) : binomialcdf(25,0.05,5)</p>
+<p><span class="math inline">\(P(X\geq 6)=1-P(x\geq 5)=1-0.9987=0.00121=0.12\)</span> %</p>
+<p>Using a TI-89 for problem (b) : binomialcdf(25,0.10,5)</p>
+<p><span class="math inline">\(P(X\geq 6)=1-P(x\geq 5)=1-0.9666=0.0333=3.33\)</span> %</p>
+<p>Using a TI-89 for problem (c) : binomialcdf(25,0.20,5)</p>
+<p><span class="math inline">\(P(X\geq 6)=1-P(x\geq 5)=1-0.61669=0.38331=35.33\)</span> %</p>
 <ol start="9" style="list-style-type: decimal">
 <li><strong>3.110 : Grasshoppers are distributed at random in a large field according to a Poisson process with parameter <span class="math inline">\(\alpha\)</span> =2 per square yard. How large should the radius R of a circular sampling region be so that the probability of finding at least one in the region equals 0.99?</strong></li>
 </ol>
+<p><span class="math inline">\(P(X=0)=\frac{e^{-2k}(2)^0}{0!}=e^{-2k}=1-0.99=0.01\)</span></p>
+<p><span class="math inline">\(\Rightarrow k=\frac{ln(0.01)}{-2} =2.3026 \text{ yds}^2\)</span></p>
+<p><span class="math inline">\(A_{\text{circle}}=\pi r^2=k\)</span></p>
+<p><span class="math inline">\(r=\sqrt{\frac{k}{\pi}}=\sqrt{\frac{2.3026}{\pi}}=0.8561\text{ yards}\)</span></p>
 <p>Bonus : <strong>3.52 : Suppose E(X) = 5 and E(X(X-1)] =27.5. What is:</strong></p>
 <p>(a.) <strong>E(<span class="math inline">\(X^2\)</span>)? [Hint: First verify that E[X(X(-1)]=E(<span class="math inline">\(X^2\)</span>)-E(X)]?</strong></p>
+<p><span class="math inline">\(27.5=E(X(X-1))=E(X^2-X)=E(X^2)-E(X)=E(X^2)-5\)</span> <span class="math inline">\(\Rightarrow E(X^2)=27.5+5=32.5\)</span></p>
 <p>(b.) <strong>V(X)?</strong></p>
+<p><span class="math inline">\(V(X)=E(X^2)-[E(X)]^2=32.5-5^2=32.5-25=7.5\)</span></p>
 <p>(c.) <strong>The general relationship among the quantites E(X), E(X(X-1)), and V(X)?</strong></p>
 <p><span class="math inline">\(E(X(X-1))=E(X^2)-E(X)\)</span> <span class="math inline">\(V(X)=E(X^2)-[E(X)]^2\)</span></p>
 </div>
