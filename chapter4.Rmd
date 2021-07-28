@@ -165,6 +165,77 @@ f(x;\nu) = \begin{cases}
 \]
 The parametr $\nu$ is called the **number of degrees of freedom** (df) of $X$. The symbol $\chi ^2$ is oftern used in place of "chi-squared". 
 
+> A random variable X is said to have a **Weilbull distribution** with shape parameter $\alpha$ and scale parameter $\beta (\alpha >0,\beta >0)$ if the pdf of $X$ is 
+\[
+f(x;\alpha ,\beta ) = \begin{cases}
+      \frac{\alpha }{\beta ^\alpha }x^{\alpha -1}e^{-(x/\beta )^\alpha} & x\geq 0 \\
+      0 & x < 0\
+      \end{cases}
+\]
+<center>
+![](img/fig4.28.png)
+<\center>
+
+* the cdf of the Weilbull rv having parameters $\alpha$ and $\beta$ is 
+\[
+F(x;\alpha ,\beta ) = \begin{cases}
+         0 & x<0\\
+         1-e^{-(x/\beta )^\alpha} & x\geq 0\
+         \end{cases}
+\]
+
+> A nonegative rv $X$ is said to have **lognormal distribution** if the rv $Y=ln(X)$ has a normal distribution. The resulting pdf of a lognormal rv when $ln(X)$ is normally distributed with parameters $\mu$ and $\sigma$ is 
+\[
+f(x;\mu ,\sigma ) = \begin{cases}
+         \frac{1}{\sqrt{2\pi}\sigma x}e^{-[ln(x)-\mu]^{2}/(2\sigma ^2)} & x\geq0\\
+         0 & x<0\
+         \end{cases}
+\]
+<center>
+![](img/fig4.30.png)
+<\center>
+
+* Because $ln(X)$ has a normal distribution, the cdf of $X$ can be expressed in terms of the cdf $\phi (z)$ of a standard normal rv $Z$. \begin{equation} \label{eqlog}
+\begin{split}
+F(x;\mu \sigma) & = P(X\leq x)=P[ln(X)\leq (x)]\\
+& = P(Z\leq \frac{ln(x)-\mu }{\sigma})=\Phi (\frac{ln(x)-\mu }{\sigma}) \quad x\geq 0
+\end{split}
+\end{equation}
+
+* be careful!! $\sigma$ and $\mu$ are not the mean and standard deviation of $X$ but of $ln(X)$
+
+* $E(X)=e^{\mu +\sigma ^2 /2}$
+
+* $V(X)=e^{2\mu +\sigma ^2}\cdot (e^{\sigma ^2}-1)$
+
+> A random variable $X$ is said to have a **beta distribution** with parameters $\alpha$, $\beta$ (both postive), $A$, and $B$ if the pdf of $X$ is 
+\[
+f(x;\alpha ,\beta ,A, B) = \begin{cases}
+         \frac{1}{B-A}\cdot\frac{\Gamma (\alpha +\beta )}{\Gamma (\alpha )\cdot \Gamma (\beta )}(\frac{x-A}{B-A})^{\alpha -1}(\frac{B-x}{B-A})^{\beta -1} & A \leq x\leq B\\
+         0 & \text{otherwise}\
+         \end{cases}
+\]
+> The case $A=0$ , $B=1$ give the **standard beta distribution** .
+<center>
+![](img/fig4.32.png)
+<\center>
+
+> A **probability plot** is used for assessing whether or not a data set follows a given distribution (such as normal or Weibull). 
+
+> Order the $n$ sample observations from the smallest to largest. Then the $ith$ smallest observation in the list is taken to be the $[100(i-0.5)/n]$ th **sample percentile** 
+
+> A plot of the $n$ pairs $$[(100(i-0.5)/n]\text{th z percentile, ith smallest observation})$$ is called a **normal probability plot**. If the sample observations are in fact drawn from a normal distribution with mean value $\mu$ and standard deviation $\sigma$, the points should fall close to a straight line with slope $\sigma$ and intercept $\mu$ . Thus a plot for which the points call close to some straight line suggests that the assumption of a normal population distribution is plausible. 
+
+* A non normal population distribution can oftern be placed in one of the following three categories: 
+
+1. It is symmetric and has "lighter tails" than does a normal distribution; that is the density curve declines more rapidly out in the tails than does a normal curve. (uniform distribution)
+
+2. It is symmetric and heavy-tailed compared to a normal distribution. (S-shaped plot, with left endpoint downward : observed < z percentile )
+
+3. It is skewed. 
+
+* $\theta _{1}=\mu \quad \theta _{2}=\sigma$  are location and scale parameters respectively. 
+
 # Theorems
 
 > **Proposition** : Let $X$ be a continuous random variable with pdf $f(x)$ and cdf $F(x)$. Then for any number $a$, $$P(X>a)=1-F(a)$$ and for any two numbers a and b with $a<b$, $$P(a \leq X \leq b) = F(b)-F(a)$$
