@@ -83,6 +83,8 @@ F(X) = \begin{cases}
 
 * E[Z]=0, and Var[Z]=1
 
+* For **any** distribution $z=\frac{x-\mu}{\sigma}\approx N(0,1)$
+
 * ![](img/fig4.16.png)
 
 > A **continuity correction** is an adjustment that is made when a discrete distribution is approximated by a continuos distribution. 
