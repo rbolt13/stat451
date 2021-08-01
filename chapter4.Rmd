@@ -317,7 +317,9 @@ f(x;\alpha ,\beta ,A, B) = \begin{cases}
 
 > **Proposition :** $$V(X)=E(X^2)-[E(X)]^2$$
 
-* Special case is $U[0,1]$ where $E(X)=\frac{1}{2}$ , $Var(X)\frac{1}{12}$
+* Special case is $U[0,1]$ where $E(X)=\frac{1}{2}$ , $Var(X)=\frac{1}{12}$
+
+* $V(X)=\frac{(b-a)^2}{12}$
 
 > **Proposition - Nonstandard Normal Distributions :** If $X$ has a normal distribution with mean $\mu$ and standard deviation $\sigma$, then $$Z=\frac{X-\mu}{\sigma}$$ has a standard normal distribution. Thus 
 \begin{equation} \label{eqa}
@@ -645,7 +647,7 @@ $P[x\leq 29.5]=0.98743$
 
 (c.) **Between 15 and 25 (inclusive)?** 
 
-$P[15\leq x\leq 25]=F(25)-F(14)=P[14.5\leq x\leq 25.5]=0.7614
+$P[15\leq x\leq 25]=F(25)-F(14)=P[14.5\leq x\leq 25.5]=0.7614$
 
 ### Exercise 59 (page 176)
 **Let X = the time between two successive arivals at the drvie-up window of a local bank. If X has an exponential distribution with $\lambda =1$ (which is identical to a standard gamma dristibution with $\alpha =1$), compute the following :**
