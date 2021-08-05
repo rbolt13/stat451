@@ -11,6 +11,40 @@ output:
 
 # Definitions
 
+> A **statistic** is any quantity whose value can be calculated from sample data. Prior to obtaining data, there is uncertainty as to what value of any particular statistic will result. Therefore, a statistic is a random variable and will be denoted by an uppercase letter; a lowercase letter is used to represent the calculated or observed value of the statistic. 
+
+> The rv's $X_{1}$, $X_{2}$, ..., $X_{n}$ are said to for a (simple) **random sample** size $n$ if
+>
+1. The $X_{i}$'s are independ rv's
+>
+2. Every $X_{i}$ has the same probability distribution. 
+
+* sometimes we also say indepent and identically distributed (iid) random variable
+
 # Theorems 
 
+> To estimate population proportion p, one possible estimator is $$\hat{p} = \text{sample proportion} = \frac{x}{n}$$
+
+* $E[\hat{p}]=\frac{E(x)}{n}\frac{np}{n}=p$
+
+* $Var[\hat{p}]=Var{\frac{x}{n}}=\frac{Var(x)}{n^2}=\frac{np(1-p)}{n^2}=\frac{p(1-p)}{n}\leq \frac{1}{4n}$
+
+> Let $X_{1}$, $X_{2}$, ..., $X_{n}$ be a random sample from a distribution with mean value $\mu$, variance $\sigma ^2$, and standard deviation $\sigma$. Then $\bar{x} =\frac{1}{n}\sum_{i=1}^{n}x_{i}$ , the sample mean has the following properties : 
+>
+1. $E(\bar{X})=\mu _{\bar{X}}=\mu$
+>
+2. $V(\bar{X})=\sigma _{X}^{2}=\frac{\sigma ^2}{n}$ and $\sigma _{\bar{X}}=\frac{\sigma}{\sqrt{n}}$
+>
+> In addition, with $T_{o}=X_{1}+...+X_{n}$ (the sample total), $E(T_{o})=n\mu$, $V(T_{o})=n\sigma ^2$, and $\sigma _{T_{o}}=\sqrt{n\sigma}$
+
+> **Central Limit Theorem**
+> $\bar{x}=\frac{\sum x_{i}}{n}=\frac{T}{n}$
+
 # Examples
+
+### Exercise 46 (page 237)
+**Young's modulus ... **
+
+
+
+
