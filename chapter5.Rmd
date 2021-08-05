@@ -39,12 +39,93 @@ output:
 
 > **Central Limit Theorem**
 > $\bar{x}=\frac{\sum x_{i}}{n}=\frac{T}{n}$
+>
+> $E(T)=n\mu$
+>
+> $Var(T)=n\sigma ^2$
+>
+> For large n, T has approximately normal distribution 
+
+* np should be at least 5, meaning if p is 50% then n=10 is good enough. 
+
+* textbooks say at least 30
+
+> **Central Limit Theorem**
+> If $X_{1}$, $X_{2}$, ..., $X_{n}$ is a random sample from <u>any</u> distribution with mean $\mu$ and variance $\sigma ^2$, then for <u>large n</u> , the sample mean $\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i$ has <u> approximately </u> normal distribution with mean $\mu$ and variance $\frac{r^2}{n}$
+>
+> This is equivalent to saying that $T=\sum_{i=1}^{n}x_i$ has <u> approximately</u> $N(n\mu , n\sigma ^2)$
 
 # Examples
 
 ### Exercise 46 (page 237)
-**Young's modulus ... **
+**Young's modulus is a quantitative measure of stiffness of an elastic material. Suppose that for aluminum allow sheets of a particular type its mean value and standard deviation are 70 GPA and 1.6 GPa respectively.**
 
+**(a.) If $\bar{X}$ is the sample mean Young's modulus for a random sample of n=16 sheets, where is the sampling distribution of $\bar{X}$ centered, and what is the standard deviation of the $\bar{X}$ distribution?**
 
+Let X be the youngs modulus for a randomly selected sheet 
 
+$\mu _{x}=E(x)=70$
 
+$\sigma _{x} =1.6$
+
+$n=16$
+
+$E(\bar{x})=\mu _{x}=70$
+
+$\sigma_{\bar{x}}=\frac{\sigma _{x}}{\sqrt{n}}=\frac{1.6}{\sqrt{16}}=0.4$
+
+Can we find $P[\bar{X}-\mu _{X}]\leq 1]$? 
+
+No, because we do not know the distribution of $\bar{X}$.
+
+**(b.) Answer the question in part(a) but for sample size of $n=64$** 
+
+$E(\bar{x})=\mu _{x}=70$
+
+$\sigma_{\bar{x}}=\frac{\sigma _{x}}{\sqrt{n}}=\frac{1.6}{\sqrt{250}}=0.1012$
+
+**(c.) For which of the two random samples, the one of part (a) or the one of part (b) is $\bar{X}$ more likely to be within 1 GPa of 70GPa? Explain your reasoning.**
+
+... 
+
+### Exercise 47 (page 237)
+**Refer to Exercise 46. Suppose the distribution is normal. (the cited article makes that assumption and even includes the corresponding normal density curve).**
+
+**(a.) Calculate $P(69\leq \bar{X}\leq 71)$ when $n=16$** 
+
+Suppose X has a normal distribution. Then $X~N(\mu _{\bar{X}}=70, \sigma_{\bar{X}}=0.4)
+
+$P[\frac{-1}{0.4}\leq \frac{\bar{X}-\mu _{\bar{X}}}{0.4} \leq \frac{1}{0.4}]=P[-2.5\leq Z\leq 2.5]=0.9875$
+
+### Exercise 51 (page 237)
+**The time taken by a randomly selected applicant for a mortgage to fill out a certain form has a normal distribution with mean value 10 min and standard deviation 2 min. If five individuals fill out a form on one day and six on another what is the probability that the sample average amount of time taken on each day is at most 11 min?**
+
+Let X = the time taken to fill out a form 
+
+X ~ $N()$ 
+
+Using normalcdf(-999,11,10, $\frac{2}{\sqrt{5}}$) $\cdot$ normalcdf(-999,11,10, $\frac{2}{\sqrt{6}}$)
+
+$P[\bar{X} \leq 11, \bar{X} ^X \leq 11]=P[\bar{X} \leq 11]\cdot P[\bar{X} ^X \leq 11]=0.8682\cdot 0.88966=0.7720$
+
+### Exercise 53 (page 237)
+**Rockwell hardness of pins of a certain type is known to have a mean value of 50 and a standard deviation of 1.2 ... **
+
+### Exercise 58 (page 242)
+**A shipping company handles containers in three different sizes: ... **
+
+### Exercise 60 (page 242)
+**Refer back to Example 5.31. Two cars with ... **
+
+### Exercise 79 (page 244)
+**Suppose that for a certain individual, calorie intake at breakfast is a random variable with expected value 500 and standard deviation 50, calorie intake at lunch is random expected value 900 and standard deviation 100, and calore intake at dinner is a random variable with expected value 2000 and standard deviation 180. Assuming that intakes at different meals are independent of one another, what is the probability that average calorie intake per day over teh next (365-day) year is at most 3500?**
+
+Diet :
+
+$X_{i}$ = Calorie intake for breakfast
+
+$Y_{i}$ = Calorie intake for Lunch
+
+$Z_{i}$ = Calorie intake for Dinner
+
+$U_{i}$ = Total calorie intake in one day = $X_{i}+Y_{i}+Z_{i}$

@@ -217,13 +217,74 @@
 </blockquote>
 <blockquote>
 <p><strong>Central Limit Theorem</strong> <span class="math inline">\(\bar{x}=\frac{\sum x_{i}}{n}=\frac{T}{n}\)</span></p>
+<p><span class="math inline">\(E(T)=n\mu\)</span></p>
+<p><span class="math inline">\(Var(T)=n\sigma ^2\)</span></p>
+<p>For large n, T has approximately normal distribution</p>
+</blockquote>
+<ul>
+<li><p>np should be at least 5, meaning if p is 50% then n=10 is good enough.</p></li>
+<li><p>textbooks say at least 30</p></li>
+</ul>
+<blockquote>
+<p><strong>Central Limit Theorem</strong> If <span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span>, …, <span class="math inline">\(X_{n}\)</span> is a random sample from <u>any</u> distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma ^2\)</span>, then for <u>large n</u> , the sample mean <span class="math inline">\(\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i\)</span> has <u> approximately </u> normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\frac{r^2}{n}\)</span></p>
+<p>This is equivalent to saying that <span class="math inline">\(T=\sum_{i=1}^{n}x_i\)</span> has <u> approximately</u> <span class="math inline">\(N(n\mu , n\sigma ^2)\)</span></p>
 </blockquote>
 </div>
 <div id="examples" class="section level1">
 <h1>Examples</h1>
 <div id="exercise-46-page-237" class="section level3">
 <h3>Exercise 46 (page 237)</h3>
-<p><strong>Young’s modulus … </strong></p>
+<p><strong>Young’s modulus is a quantitative measure of stiffness of an elastic material. Suppose that for aluminum allow sheets of a particular type its mean value and standard deviation are 70 GPA and 1.6 GPa respectively.</strong></p>
+<p><strong>(a.) If <span class="math inline">\(\bar{X}\)</span> is the sample mean Young’s modulus for a random sample of n=16 sheets, where is the sampling distribution of <span class="math inline">\(\bar{X}\)</span> centered, and what is the standard deviation of the <span class="math inline">\(\bar{X}\)</span> distribution?</strong></p>
+<p>Let X be the youngs modulus for a randomly selected sheet</p>
+<p><span class="math inline">\(\mu _{x}=E(x)=70\)</span></p>
+<p><span class="math inline">\(\sigma _{x} =1.6\)</span></p>
+<p><span class="math inline">\(n=16\)</span></p>
+<p><span class="math inline">\(E(\bar{x})=\mu _{x}=70\)</span></p>
+<p><span class="math inline">\(\sigma_{\bar{x}}=\frac{\sigma _{x}}{\sqrt{n}}=\frac{1.6}{\sqrt{16}}=0.4\)</span></p>
+<p>Can we find <span class="math inline">\(P[\bar{X}-\mu _{X}]\leq 1]\)</span>?</p>
+<p>No, because we do not know the distribution of <span class="math inline">\(\bar{X}\)</span>.</p>
+<p><strong>(b.) Answer the question in part(a) but for sample size of <span class="math inline">\(n=64\)</span></strong></p>
+<p><span class="math inline">\(E(\bar{x})=\mu _{x}=70\)</span></p>
+<p><span class="math inline">\(\sigma_{\bar{x}}=\frac{\sigma _{x}}{\sqrt{n}}=\frac{1.6}{\sqrt{250}}=0.1012\)</span></p>
+<p><strong>(c.) For which of the two random samples, the one of part (a) or the one of part (b) is <span class="math inline">\(\bar{X}\)</span> more likely to be within 1 GPa of 70GPa? Explain your reasoning.</strong></p>
+<p>…</p>
+</div>
+<div id="exercise-47-page-237" class="section level3">
+<h3>Exercise 47 (page 237)</h3>
+<p><strong>Refer to Exercise 46. Suppose the distribution is normal. (the cited article makes that assumption and even includes the corresponding normal density curve).</strong></p>
+<p><strong>(a.) Calculate <span class="math inline">\(P(69\leq \bar{X}\leq 71)\)</span> when <span class="math inline">\(n=16\)</span></strong></p>
+<p>Suppose X has a normal distribution. Then $X~N(<em>{{X}}=70, </em>{{X}}=0.4)</p>
+<p><span class="math inline">\(P[\frac{-1}{0.4}\leq \frac{\bar{X}-\mu _{\bar{X}}}{0.4} \leq \frac{1}{0.4}]=P[-2.5\leq Z\leq 2.5]=0.9875\)</span></p>
+</div>
+<div id="exercise-51-page-237" class="section level3">
+<h3>Exercise 51 (page 237)</h3>
+<p><strong>The time taken by a randomly selected applicant for a mortgage to fill out a certain form has a normal distribution with mean value 10 min and standard deviation 2 min. If five individuals fill out a form on one day and six on another what is the probability that the sample average amount of time taken on each day is at most 11 min?</strong></p>
+<p>Let X = the time taken to fill out a form</p>
+<p>X ~ <span class="math inline">\(N()\)</span></p>
+<p>Using normalcdf(-999,11,10, <span class="math inline">\(\frac{2}{\sqrt{5}}\)</span>) <span class="math inline">\(\cdot\)</span> normalcdf(-999,11,10, <span class="math inline">\(\frac{2}{\sqrt{6}}\)</span>)</p>
+<p><span class="math inline">\(P[\bar{X} \leq 11, \bar{X} ^X \leq 11]=P[\bar{X} \leq 11]\cdot P[\bar{X} ^X \leq 11]=0.8682\cdot 0.88966=0.7720\)</span></p>
+</div>
+<div id="exercise-53-page-237" class="section level3">
+<h3>Exercise 53 (page 237)</h3>
+<p><strong>Rockwell hardness of pins of a certain type is known to have a mean value of 50 and a standard deviation of 1.2 … </strong></p>
+</div>
+<div id="exercise-58-page-242" class="section level3">
+<h3>Exercise 58 (page 242)</h3>
+<p><strong>A shipping company handles containers in three different sizes: … </strong></p>
+</div>
+<div id="exercise-60-page-242" class="section level3">
+<h3>Exercise 60 (page 242)</h3>
+<p><strong>Refer back to Example 5.31. Two cars with … </strong></p>
+</div>
+<div id="exercise-79-page-244" class="section level3">
+<h3>Exercise 79 (page 244)</h3>
+<p><strong>Suppose that for a certain individual, calorie intake at breakfast is a random variable with expected value 500 and standard deviation 50, calorie intake at lunch is random expected value 900 and standard deviation 100, and calore intake at dinner is a random variable with expected value 2000 and standard deviation 180. Assuming that intakes at different meals are independent of one another, what is the probability that average calorie intake per day over teh next (365-day) year is at most 3500?</strong></p>
+<p>Diet :</p>
+<p><span class="math inline">\(X_{i}\)</span> = Calorie intake for breakfast</p>
+<p><span class="math inline">\(Y_{i}\)</span> = Calorie intake for Lunch</p>
+<p><span class="math inline">\(Z_{i}\)</span> = Calorie intake for Dinner</p>
+<p><span class="math inline">\(U_{i}\)</span> = Total calorie intake in one day = <span class="math inline">\(X_{i}+Y_{i}+Z_{i}\)</span></p>
 </div>
 </div>
 </div>
