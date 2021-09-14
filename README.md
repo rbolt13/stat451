@@ -3,7 +3,7 @@ Definitions, Theorems, Examples, and Homework problems from the book *Probabilit
 
 View [here](https://rbolt13.github.io/stat451/)
 
-# To Do 
+# To Do (post)
 * Chapter 1 
 * Chpater 2 
 * Chapter 4 Homework 
