@@ -23,7 +23,9 @@ For questions, comments, or curiosity check out the contact page for my email, a
 Enjoy :D
 
 # Updates 
-As of July 15th this site is live, and updated regularly. Check the table below for updates on each page : 
+As of August 2021 this site is dead. Check the table below as for the status of each page: 
+
+
 ```{r, echo=F}
 site.urls <- c("https://rbolt13.github.io/stat451/index.html",
                "https://rbolt13.github.io/stat451/chapter1.html",

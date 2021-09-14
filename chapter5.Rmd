@@ -106,7 +106,7 @@ X ~ $N()$
 
 Using normalcdf(-999,11,10, $\frac{2}{\sqrt{5}}$) $\cdot$ normalcdf(-999,11,10, $\frac{2}{\sqrt{6}}$)
 
-$P[\bar{X} \leq 11, \bar{X} ^X \leq 11]=P[\bar{X} \leq 11]\cdot P[\bar{X} ^X \leq 11]=0.8682\cdot 0.88966=0.7720$
+$P[\bar{X}\leq 11, \bar{X}^X \leq 11]=P[\bar{X}\leq 11]\cdot P[\bar{X}^X \leq 11]=0.8682\cdot 0.88966=0.7720$
 
 ### Exercise 53 (page 237)
 **Rockwell hardness of pins of a certain type is known to have a mean value of 50 and a standard deviation of 1.2 ... **
