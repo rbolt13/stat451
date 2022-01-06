@@ -570,7 +570,7 @@ $c=2.127$
 
 (e.) **If four haul times are independently selected, what is the probability that at least one of them exceeds 10 min?** 
 
-Let $x_1$,$x_2$, $x_3$, $x_4$, be the four independt haul times. 
+Let $x_1$,$x_2$, $x_3$, $x_4$, be the four independent haul times. 
 
 \begin{equation}\label{bingbong}
 \begin{split}

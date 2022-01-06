@@ -9,9 +9,9 @@ output:
   html_document: rmdformats::readthedown
 ---
 
-The best way to reach me is by email at rbolt@pdx.edu.
+The best way to reach me is by email at rbolt@pdx.edu. 
 
-Be sure to check out some of the other projects I have worked on below!
+Be sure to check out some of the other projects I have worked on below or on my blog [here](https://rbolt2.netlify.app/). 
 
 ```{r, echo = F, message=F}
 library(dplyr)
@@ -34,7 +34,7 @@ Description <- c("The code for this and all other projects I've made are on Gith
                  "This is the first website I made using R-Studio and Github. Here I posted projects from Statistics- 341 : Introduction to R, such as : Kobe Hot Hands, Gloabal Fuel Data, and COVID-19.",
                  "Completed fall term 2020 at Portland Community College, this project uses GIS and Arc Pro to investigate dispensary diversity in Oregon.",
                  "My first attempt with blogdown in R Studio. Posts are mostly pictures of my garden.",
-                 "This is my personal website, and growing portfolio created with blogdown in R Studio.")
+                 "This is my first blog created with blogdown in R Studio.")
 
 # Data Frame
 y <- data.frame(Links, Description)
